@@ -229,3 +229,45 @@ export const blogs: BlogType[] =
       ]
     }
   ]
+
+
+export type PortfoliosType = {
+  id: number,
+  title: string;
+  location: string;
+  images: string[][];
+}
+
+export const portfolios: PortfoliosType[] = [
+  {
+    id: 1,
+    title: "MR. RIYAS'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_riyas_residence/pic_1.1.png",
+        "/images/portfolio/mr_riyas_residence/pic_1.2.png",
+      ],
+      [
+        "/images/portfolio/mr_riyas_residence/pic_2.png",
+      ]
+    ]
+  },
+  {
+    id: 2,
+    title: "DR. SUMESH'S RESIDENCE",
+    location: "Kottayam, Kerala | Completed in 2025 | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/dr_sumesh_residence/pic_1.png"
+      ],
+      [
+        "/images/portfolio/dr_sumesh_residence/pic_2.1.png",
+        "/images/portfolio/dr_sumesh_residence/pic_2.2.png"
+      ],
+      [
+        "/images/portfolio/dr_sumesh_residence/pic_3.png",
+      ]
+    ]
+  },
+]

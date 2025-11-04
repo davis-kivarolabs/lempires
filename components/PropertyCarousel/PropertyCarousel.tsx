@@ -3,46 +3,11 @@
 import Image from 'next/image';
 import React, { useState, useEffect, useCallback } from 'react';
 import "./PropertyCarousel.scss"
+import { portfolios, PortfoliosType } from '@/lib/cms';
+import { useRouter } from 'next/navigation';
+
 
 const PropertyCarousel = () => {
-    const slides = [
-        {
-            id: 1,
-            title: "MR. RIYAS'S RESIDENCE",
-            location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
-            images: [
-                "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-                "/images/portfolio/MR. RIYAS RESIDENCE_2.jpg"
-            ]
-        },
-        {
-            id: 2,
-            title: "MR. RIHAB'S RESIDENCE",
-            location: "Mukkam, Kerala | G+Ray Residence | 2500 Sq. feet",
-            images: [
-                "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-                "/images/portfolio/MR. RIYAS RESIDENCE_2.jpg"
-            ]
-        },
-        {
-            id: 3,
-            title: "DR. SUMESH'S RESIDENCE",
-            location: "Kottayam, Kerala | Completed in 2025 | Turnkey Residence | 2500 Sq. feet",
-            images: [
-                "/images/portfolio/DR. SUMESH'S RESIDENCE_1.jpg"
-            ]
-        },
-        {
-            id: 4,
-            title: "MODERN VILLA",
-            location: "Trivandrum, Kerala | Contemporary Design | 3200 Sq. feet",
-            images: [
-                "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-                "/images/portfolio/MR. RIYAS RESIDENCE_2.jpg"
-            ]
-        }
-    ];
-
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(false);
@@ -50,16 +15,16 @@ const PropertyCarousel = () => {
     const nextSlide = useCallback(() => {
         if (isTransitioning) return;
         setIsTransitioning(true);
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
+        setCurrentSlide((prev) => (prev + 1) % portfolios.length);
         setTimeout(() => setIsTransitioning(false), 600);
-    }, [slides.length, isTransitioning]);
+    }, [portfolios.length, isTransitioning]);
 
     const prevSlide = useCallback(() => {
         if (isTransitioning) return;
         setIsTransitioning(true);
-        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+        setCurrentSlide((prev) => (prev - 1 + portfolios.length) % portfolios.length);
         setTimeout(() => setIsTransitioning(false), 600);
-    }, [slides.length, isTransitioning]);
+    }, [portfolios.length, isTransitioning]);
 
     // Auto-play functionality
     useEffect(() => {
@@ -67,13 +32,18 @@ const PropertyCarousel = () => {
 
         const interval = setInterval(() => {
             nextSlide();
-        }, 5000);
+        }, 10000);
 
         return () => clearInterval(interval);
     }, [isPaused, nextSlide]);
 
-    const currentSlideData = slides[currentSlide];
+    const currentSlideData = portfolios[currentSlide];
 
+    const router = useRouter();
+
+    const handleRedirect = () => {
+        router.push(`/portfolio`);
+    };
     return (
         <div
             className='property_carousel'
@@ -81,32 +51,37 @@ const PropertyCarousel = () => {
             onMouseLeave={() => setIsPaused(false)}
         >
             <div className='carousel_track'>
-                {slides.map((slide, index) => (
-                    <div
-                        key={slide.id}
-                        className={`property_images ${index === currentSlide ? 'active' : ''} ${index < currentSlide ? 'prev' : 'next'}`}
-                    >
-                        {slide.images.map((image, imgIndex) => (
-                            <div key={imgIndex} className='property_image_wrapper'>
-                                <Image
-                                    className='property_image'
-                                    alt={`${slide.title} - Image ${imgIndex + 1}`}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                                    src={image}
-                                    style={{ objectFit: 'cover' }}
-                                    priority={index === 0 && imgIndex === 0}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                ))}
+                {portfolios.map((slide, index) => {
+                    console.log("slide: ", slide.images[0])
+                    return (
+                        <div
+                            key={slide.id}
+                            className={`property_images ${index === currentSlide ? 'active' : ''} ${index < currentSlide ? 'prev' : 'next'}`}
+                        >
+                            {slide.images[0].map((image, imgIndex) => (
+                                <div key={imgIndex} className='property_image_wrapper'>
+                                    <Image
+                                        onClick={handleRedirect}
+                                        className='property_image'
+                                        alt={`${image} - Image ${imgIndex + 1}`}
+                                        // alt={`${slide.title} - Image ${imgIndex + 1}`}
+                                        fill
+                                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                        src={image}
+                                        style={{ objectFit: 'cover' }}
+                                        priority={index === 0 && imgIndex === 0}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    )
+                })}
             </div>
 
             <div className='property_details'>
-                <div className='grid gap-[2px] text_content'>
-                    <p className='client_name' key={`name-${currentSlide}`}>{currentSlideData.title}</p>
-                    <p className='property_address' key={`address-${currentSlide}`}>{currentSlideData.location}</p>
+                <div className='grid gap-[2px] text_content' onClick={handleRedirect} >
+                    <p className='client_name cursor-pointer' key={`name-${currentSlide}`}>{currentSlideData.title}</p>
+                    <p className='property_address cursor-pointer' key={`address-${currentSlide}`}>{currentSlideData.location}</p>
                 </div>
                 <div className='carousel_buttons'>
                     <button onClick={prevSlide} aria-label="Previous slide" disabled={isTransitioning}>
@@ -118,7 +93,7 @@ const PropertyCarousel = () => {
                     <div className='carousel_slide_count'>
                         <p key={`count-${currentSlide}`}>{String(currentSlide + 1).padStart(2, '0')}</p>
                         <span>/</span>
-                        <p>{String(slides.length).padStart(2, '0')}</p>
+                        <p>{String(portfolios.length).padStart(2, '0')}</p>
                     </div>
                     <button onClick={nextSlide} aria-label="Next slide" disabled={isTransitioning}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,141 +103,98 @@ const PropertyCarousel = () => {
                     </button>
                 </div>
             </div>
-
-            {/* Progress bar */}
-            {/* <div className='carousel_progress'>
-                    <div
-                        className='progress_bar'
-                        style={{
-                            animationPlayState: isPaused ? 'paused' : 'running',
-                            animationName: `progress-${currentSlide}`
-                        }}
-                        key={currentSlide}
-                    />
-                </div> */}
         </div>
     );
 };
 
 export default PropertyCarousel;
 
-// 'use client'
+export const PropertyCarouselPerson = ({ item }: { item: PortfoliosType }) => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
-// import Image from 'next/image';
-// import React, { useState, useEffect, useCallback } from 'react';
-// import "./PropertyCarousel.scss"
+    const nextSlide = useCallback(() => {
+        if (isTransitioning) return;
+        setIsTransitioning(true);
+        setCurrentSlide((prev) => (prev + 1) % item.images.length);
+        setTimeout(() => setIsTransitioning(false), 600);
+    }, [item.images.length, isTransitioning]);
 
-// const PropertyCarousel = () => {
-//     const slides = [
-//         {
-//             id: 1,
-//             title: "MR. RIYAS'S RESIDENCE",
-//             location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
-//             images: [
-//                 "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-//                 "/images/portfolio/MR. RIYAS RESIDENCE_2.jpg"
-//             ]
-//         },
-//         {
-//             id: 2,
-//             title: "MR. RIHAB'S RESIDENCE",
-//             location: "Mukkam, Kerala | G+Ray Residence | 2500 Sq. feet",
-//             images: [
-//                 "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-//                 "/images/portfolio/MR. RIYAS RESIDENCE_2.jpg"
-//             ]
-//         },
-//         {
-//             id: 3,
-//             title: "DR. SUMESH'S RESIDENCE",
-//             location: "Kottayam, Kerala | Completed in 2025 | Turnkey Residence | 2500 Sq. feet",
-//             images: [
-//                 "/images/portfolio/DR. SUMESH'S RESIDENCE_1.jpg"
-//             ]
-//         },
-//         {
-//             id: 4,
-//             title: "MODERN VILLA",
-//             location: "Trivandrum, Kerala | Contemporary Design | 3200 Sq. feet",
-//             images: [
-//                 "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-//                 "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg"
-//             ]
-//         }
-//     ];
+    const prevSlide = useCallback(() => {
+        if (isTransitioning) return;
+        setIsTransitioning(true);
+        setCurrentSlide((prev) => (prev - 1 + item.images.length) % item.images.length);
+        setTimeout(() => setIsTransitioning(false), 600);
+    }, [item.images.length, isTransitioning]);
 
-//     const [currentSlide, setCurrentSlide] = useState(0);
-//     const [isPaused, setIsPaused] = useState(false);
+    // Auto-play functionality
+    useEffect(() => {
+        if (isPaused) return;
 
-//     const nextSlide = useCallback(() => {
-//         setCurrentSlide((prev) => (prev + 1) % slides.length);
-//     }, [slides.length]);
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 10000);
 
-//     const prevSlide = useCallback(() => {
-//         setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-//     }, [slides.length]);
+        return () => clearInterval(interval);
+    }, [isPaused, nextSlide]);
 
-//     // Auto-play functionality
-//     useEffect(() => {
-//         if (isPaused) return;
+    // const currentSlideData = item.images[currentSlide];
 
-//         const interval = setInterval(() => {
-//             nextSlide();
-//         }, 5000); // Change slide every 5 seconds
+    return (
+        <div
+            className='property_carousel'
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+        >
+            <div className='carousel_track'>
+                {item.images.map((slide, index) => (
+                    <div
+                        key={index}
+                        className={`property_images ${index === currentSlide ? 'active' : ''} ${index < currentSlide ? 'prev' : 'next'}`}
+                    >
 
-//         return () => clearInterval(interval);
-//     }, [isPaused, nextSlide]);
+                        <div className='property_image_wrapper'>
+                            <Image
+                                className='property_image'
+                                alt={`${slide} - Image ${index + 1}`}
+                                fill
+                                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                src={slide}
+                                style={{ objectFit: 'cover' }}
+                                priority={index === 0 && index === 0}
+                            />
+                        </div>
 
-//     const currentSlideData = slides[currentSlide];
+                    </div>
+                ))}
+            </div>
 
-//     return (
-//         <div
-//             className='property_carousel'
-//             onMouseEnter={() => setIsPaused(true)}
-//             onMouseLeave={() => setIsPaused(false)}
-//         >
-//             <div className='property_images'>
-//                 {currentSlideData.images.map((image, index) => (
-//                     <div key={index} className='property_image_wrapper'>
-//                         <Image
-//                             className='property_image'
-//                             alt={`${currentSlideData.title} - Image ${index + 1}`}
-//                             fill
-//                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-//                             src={image}
-//                             style={{ objectFit: 'cover' }}
-//                             priority={index === 0}
-//                         />
-//                     </div>
-//                 ))}
-//             </div>
-//             <div className='property_details'>
-//                 <div className='grid gap-[2px]'>
-//                     <p className='client_name'>{currentSlideData.title}</p>
-//                     <p className='property_address'>{currentSlideData.location}</p>
-//                 </div>
-//                 <div className='carousel_buttons'>
-//                     <button onClick={prevSlide} aria-label="Previous slide">
-//                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                             <path d="M19 12H5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-//                             <path d="M12 5L5 12L12 19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-//                         </svg>
-//                     </button>
-//                     <div className='carousel_slide_count'>
-//                         <p>{String(currentSlide + 1).padStart(2, '0')}</p>
-//                         <span>/</span>
-//                         <p>{String(slides.length).padStart(2, '0')}</p>
-//                     </div>
-//                     <button onClick={nextSlide} aria-label="Next slide">
-//                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                             <path d="M5 12H19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-//                             <path d="M12 5L19 12L12 19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-//                         </svg>
-//                     </button>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default PropertyCarousel;
+            <div className='property_details'>
+                <div className='grid gap-[2px] text_content'>
+                    <p className='client_name' key={`name-${currentSlide}`}>{item.title}</p>
+                    <p className='property_address' key={`address-${currentSlide}`}>{item.location}</p>
+                </div>
+                <div className='carousel_buttons'>
+                    <button onClick={prevSlide} aria-label="Previous slide" disabled={isTransitioning}>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M12 5L5 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
+                    <div className='carousel_slide_count'>
+                        <p key={`count-${currentSlide}`}>{String(currentSlide + 1).padStart(2, '0')}</p>
+                        <span>/</span>
+                        <p>{String(item.images.length).padStart(2, '0')}</p>
+                    </div>
+                    <button onClick={nextSlide} aria-label="Next slide" disabled={isTransitioning}>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};

@@ -10,7 +10,6 @@ import { BlogType } from '@/lib/cms'
 const Blog = ({ data }: { data: BlogType }) => {
     const router = useRouter();
 
-    // Function to handle redirect
     const handleRedirect = (title: string) => {
         router.push(`/blog/${title}`);
     };

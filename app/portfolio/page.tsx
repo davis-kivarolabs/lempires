@@ -1,5 +1,8 @@
+'use client'
+
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
-import PropertyCarousel from '@/components/PropertyCarousel/PropertyCarousel';
+import { PropertyCarouselPerson } from '@/components/PropertyCarousel/PropertyCarousel';
+import { portfolios } from '@/lib/cms';
 import React from 'react'
 
 const portfolio = () => {
@@ -10,11 +13,7 @@ const portfolio = () => {
                     <BreadCrumbs title='Portfolio' />
                 </div>
                 <div className='grid gap-[50px]' >
-                    <PropertyCarousel />
-                    <PropertyCarousel />
-                    <PropertyCarousel />
-                    <PropertyCarousel />
-                    <PropertyCarousel />
+                    {portfolios.map((item, i) => <PropertyCarouselPerson item={item} key={i} />)}
                 </div>
             </div>
         </div>
