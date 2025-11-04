@@ -37,7 +37,7 @@ const Accordion = ({ title, content }: AccordionProps) => {
                 className="overflow-hidden transition-all duration-500 ease-in-out"
             >
                 {
-                    content.map((item) => <div className="pb-4 text-gray-600 leading-relaxed" >{item}</div>)
+                    content.map((item, i) => <div key={i} className="pb-4 text-gray-600 leading-relaxed" >{item}</div>)
                     // content.map((item) => <DescTexts color="#878C91" desc={item} />)
                 }
             </div>

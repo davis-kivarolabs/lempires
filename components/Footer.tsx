@@ -24,7 +24,7 @@ const Footer = () => {
                             className="cursor-pointer"
                         />
                     </Link>
-                    <p>We create your dreams from conception <br /> to completion</p>
+                    <p className='footer_desc' >We create your dreams from conception <br /> to completion</p>
 
                     <div className='flex gap-[12px]' >
                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,8 +81,8 @@ const Footer = () => {
                                 </svg>
                             </span>
                             <div className='flex gap-[10px]' >
-                                <p>+91-7012191993</p>
-                                <p>+91-7012191993</p>
+                                <p style={{ textWrap: "nowrap" }} >+91-7012191993</p>
+                                <p style={{ textWrap: "nowrap" }} >+91-7012191993</p>
                             </div>
                         </div>
                         <div className='flex items-center gap-[8px]' >

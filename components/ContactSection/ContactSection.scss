@@ -8,11 +8,22 @@
     align-items: start;
     justify-content: space-between;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 68px;
+    }
+
     .contact_title_section {
         width: 100%;
         display: flex;
         align-items: center;
         gap: 50px;
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: start;
+            gap: 30px;
+        }
     }
 
     .contact_inputs {

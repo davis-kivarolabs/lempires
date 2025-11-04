@@ -13,23 +13,27 @@ const Home = () => {
     <>
       <div className="home_page">
         <div className="banner_section h-[100dvh] bg-[#242424] flex items-end justify-center" >
-          <h1 className='text-[84px] text-[white] z-10' >Architecture of <span className='text-[#3CBBCE]' >Being</span> </h1>
+          {/* <h1 className='text-[84px] text-[white] z-10' >Architecture of <span className='text-[#3CBBCE]' >Being</span> </h1> */}
+          <h1 className='text-[clamp(48px, 4vw, 48px)] text-white z-10'>
+            Architecture of <span className='text-[#3CBBCE]'>Being</span>
+          </h1>
+
         </div>
 
         <div className="who_we_are_section"> <TitleText /> </div>
         <OverlaySection>
           <div className="home_aboutus_section padding_section">
-            <div className='flex-1 gap-[40px]' >
+            <div className='home_aboutus_section_titles' >
               <BreadCrumbs title='ABOUT US' />
               <SectionTitle title_1='Building Homes,' title_2='Building Trust' />
             </div>
-            <div className='flex-1' >
+            <div className='home_aboutus_section_desc' >
               <DescTexts color='#878C91' desc={`At L'empire Builders, we believe great spaces should feel right from the moment you enter. We create homes that balance beautiful design with practical living, blending timeless Vaastu principles with contemporary comfort. Our approach is simple: listen deeply, design intentionally, and deliver spaces where life unfolds naturally.`} />
             </div>
           </div>
         </OverlaySection>
 
-        <div className="home_services_section" style={{ backgroundColor: "black", width: "100%", position: "sticky", top: 0 }} >
+        <div className="home_services_section" >
           <Services />
         </div>
       </div>
