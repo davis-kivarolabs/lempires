@@ -62,6 +62,7 @@
 
                     h1 {
                         // font-family: Brockmann;
+                        font-family: var(--font-heading), sans-serif;
                         font-weight: 500;
                         font-size: clamp(16px, 2vw, 20px);
                         line-height: 100%;
@@ -158,6 +159,7 @@
                         place-items: center;
 
                         // font-family: Brockmann;
+                        font-family: var(--font-heading), sans-serif;
                         // font-weight: 500;
                         font-size: 16px;
                         line-height: 100%;
@@ -167,6 +169,7 @@
 
                     .sub_title_text {
                         // font-family: Brockmann;
+                        font-family: var(--font-heading), sans-serif;
                         // font-weight: 500;
                         font-size: 14px;
                         line-height: 100%;

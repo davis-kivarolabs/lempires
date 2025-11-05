@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    console.log("menuOpen: ", menuOpen)
 
     // prevent body scroll when menu open
     useEffect(() => {

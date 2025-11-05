@@ -16,12 +16,29 @@
 
 .button {
   background-color: $primary-color;
-  color: white;
+  // color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  // padding: 0.75rem 1.5rem;
+  width: 88px;
+  height: 56px;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+  @media (max-width: 1024px) {
+    width: 40px;
+    height: 25px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    @media (max-width: 1024px) {
+      width: 16px;
+      height: 16px;
+    }
+  }
 
   &:hover {
     background-color: color.scale($primary-color, $lightness: -10%);
@@ -37,6 +54,7 @@
   border: 1px solid #000000;
 
   // font-family: Brockmann;
+  font-family: var(--font-heading), sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;

@@ -37,7 +37,7 @@
     @media (max-width: 768px) {
       gap: 20px;
       width: 100%;
-      justify-content: space-between;
+      justify-content: end;
     }
 
     .carousel_slide_count {
@@ -112,6 +112,38 @@
       overflow: hidden;
       width: 70px;
       height: 70px;
+    }
+
+    .client_details {
+      h3 {
+        // font-family: Brockmann;
+        font-family: var(--font-heading), sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 180%;
+        letter-spacing: 0%;
+        color: #010205;
+      }
+
+      p {
+        // font-family: Brockmann;
+        font-family: var(--font-heading), sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 180%;
+        letter-spacing: 0%;
+        color: #878C91;
+      }
+    }
+  }
+
+  .client_review {
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 180%;
+      letter-spacing: 0%;
+      color: #878C91;
     }
   }
 }

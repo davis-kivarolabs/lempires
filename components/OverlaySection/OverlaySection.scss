@@ -49,12 +49,14 @@
 
           span {
             // font-family: Brockmann;
+            font-family: var(--font-heading), sans-serif;
             font-size: clamp(34px, 3vw, 84px);
             line-height: 150%;
             letter-spacing: -3%;
 
             span {
               //   font-family: Brockmann;
+              font-family: var(--font-heading), sans-serif;
               letter-spacing: -3%;
               color: #3cbbce;
             }
@@ -62,6 +64,7 @@
 
           p {
             // font-family: Brockmann;
+            font-family: var(--font-heading), sans-serif;
             font-weight: 500;
             font-size: clamp(22px, 3vw, 32px);
             letter-spacing: -3%;

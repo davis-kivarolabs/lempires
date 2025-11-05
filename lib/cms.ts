@@ -271,3 +271,60 @@ export const portfolios: PortfoliosType[] = [
     ]
   },
 ]
+
+
+
+export const reviews = [
+  {
+    name: "Mr. Joe & Family",
+    role: "Stock Consultant",
+    img: "/images/reviews/joe_and_family.png",
+    review:
+      "I had an outstanding experience with L'empire Builders! From the start, their team demonstrated remarkable planning and attention to detail. They listened carefully to our needs, creating a plan that aligned perfectly with our vision and budget. Highly recommended!",
+  },
+  {
+    name: "Mr. Jefrin",
+    role: "Entrepreneur",
+    img: "/images/reviews/mr_jefrin.png",
+    review:
+      "I'm extremely impressed with L'empire Builders' interior services! They understood my ideas and transformed my space with precision, staying within budget and on schedule. The result is a beautifully designed interior that truly reflects my style. Highly recommended for anyone seeking professional and thoughtful interior solutions.",
+  },
+  {
+    name: "Mr. Anto",
+    role: "Canadian Govt. Employee",
+    img: "/images/reviews/mr_anto.png",
+    review:
+      "I'm truly satisfied with L'empire Builders' planning and 3D services! They created a detailed design that exceeded my expectations. The 3D renderings helped me visualize my home before construction. The process was smooth, and they were highly responsive to adjustments as well.",
+  },
+  {
+    name: "Mr. Jackson",
+    role: "Canara Bank Manager",
+    img: "/images/reviews/mr_jackson.png",
+    review:
+      "L'empire Builders delivered exceptional service from start to finish. Their professionalism, attention to detail, and top-quality craftsmanship exceeded our expectations. The project was completed on time, within budget, and flawlessly executed. Highly recommended!"
+  },
+  {
+    name: "Mr. Sunil",
+    role: "Sr. Software Engineer",
+    img: "/images/reviews/mr_sunil.png",
+    review: "L'empire exceeded our expectations with their expert craftsmanship and attention to detail. From planning to execution, their team ensured a seamless experience, delivering a stunning and well-built home. Highly recommended for anyone seeking quality construction!"
+  },
+  {
+    name: "Mr. Vivek",
+    role: "Kollam",
+    img: "/images/reviews/mr_vivek.png",
+    review: "Building our dream home felt effortless with L'empire. Their team listened to our ideas, provided expert guidance, and delivered a home that perfectly matched our vision. The attention to detail and commitment to quality were truly impressive. Highly recommended!"
+  },
+  {
+    name: "Mr. Jayaprakash",
+    role: "Thrissur",
+    img: "/images/reviews/mr_jayaprakash.png",
+    review: "L'empire turned our dream into reality with their flawless execution and dedication. Every step of the process was smooth, and the final result was beyond what we imagined. If you want a home built with passion and expertise, L'empire is the right choice!"
+  },
+  {
+    name: "Mr. Noel & Family",
+    role: "Thalayolaparambu",
+    img: "/images/reviews/mr_noel_family.png",
+    review: "We had a limited plot area and a modest budget, which made the planning stage quite challenging. But L'empire Builders took on every difficulty with expertise and creativity. Despite the constraints, they designed a beautiful home that perfectly suits our needs. Their dedication, flawless execution, and constant support made our journey smooth from start to finish."
+  },
+];

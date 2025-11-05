@@ -4,6 +4,7 @@
     outline: none;
 
     // font-family: Brockmann;
+    font-family: var(--font-heading), sans-serif;
     font-weight: 500;
     font-size: 24px;
     line-height: 130%;
@@ -23,18 +24,23 @@
 
 .textarea_field {
   display: grid;
+
   // gap: 30px;
   label {
+    font-family: var(--font-heading), sans-serif;
     font-weight: 500;
     font-size: 24px;
     line-height: 130%;
     letter-spacing: -3%;
+    color: #878C91;
   }
+
   textarea {
     border-bottom: 1px solid #f7f6f1cc;
     outline: none;
 
     // font-family: Brockmann;
+    font-family: var(--font-heading), sans-serif;
     font-weight: 500;
     font-size: 24px;
     line-height: 130%;

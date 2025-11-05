@@ -3,18 +3,22 @@ import React from 'react'
 import "./blogs.scss"
 import Blog from '@/components/Blog'
 import { blogs } from '@/lib/cms'
+import Footer from '@/components/Footer'
 
 const Blogs = () => {
     return (
-        <div className='blog_page padding_section' >
-            <BreadCrumbs title='BLOG ' />
+        <>
+            <div className='blog_page padding_section' >
+                <BreadCrumbs title='BLOG ' />
 
-            <div className='list_blogs' >
-                {
-                    blogs.map((blog, i) => <Blog data={blog} key={i} />)
-                }
+                <div className='list_blogs' >
+                    {
+                        blogs.map((blog, i) => <Blog data={blog} key={i} />)
+                    }
+                </div>
             </div>
-        </div>
+            <Footer />
+        </>
     )
 }
 

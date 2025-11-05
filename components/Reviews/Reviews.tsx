@@ -3,39 +3,10 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import "./Reviews.scss";
+import { reviews } from "@/lib/cms";
+import Button from "../Button/Button";
 
 const Reviews = () => {
-    const reviews = [
-        {
-            name: "Mr. Joe & Family",
-            role: "Stock Consultant",
-            img: "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-            review:
-                "I had an outstanding experience with L'empire Builders! From the start, their team demonstrated remarkable planning and attention to detail. They listened carefully to our needs, creating a plan that aligned perfectly with our vision and budget. Highly recommended!",
-        },
-        {
-            name: "Mrs. Aisha Thomas",
-            role: "Entrepreneur",
-            img: "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-            review:
-                "The team exceeded all our expectations! Every aspect, from design to delivery, was handled professionally. We love our new home!",
-        },
-        {
-            name: "Mr. Daniel",
-            role: "Bank Manager",
-            img: "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-            review:
-                "Excellent craftsmanship and attention to detail. They kept us updated throughout and delivered on time. A truly trustworthy builder!",
-        },
-        {
-            name: "Ms. Reema",
-            role: "Architect",
-            img: "/images/portfolio/MR. RIYAS RESIDENCE_1.jpg",
-            review:
-                "Their creativity and professionalism made our dream space come true. The process was smooth and transparent!",
-        },
-    ];
-
     // Detect if screen is mobile
     const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
     const itemsPerSlide = isMobile ? 1 : 2;
@@ -78,12 +49,21 @@ const Reviews = () => {
 
             {/* Buttons */}
             <div className="carousel_buttons">
-                <button onClick={prevSlide} aria-label="Previous slide">
+                {/* <button onClick={prevSlide} aria-label="Previous slide">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
                         <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M12 5L5 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                </button>
+                </button> */}
+                <Button onClick={prevSlide} >
+                    <div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M12 5L5 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </div>
+                </Button>
+
 
                 <div className="carousel_slide_count">
                     <p>{currentIndex + 1}</p>
@@ -91,12 +71,20 @@ const Reviews = () => {
                     <p>{totalSlides}</p>
                 </div>
 
-                <button onClick={nextSlide} aria-label="Next slide">
+                <Button onClick={nextSlide} aria-label="Next slide">
+                    <div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </div>
+                </Button>
+                {/* <button onClick={nextSlide} aria-label="Next slide">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
                         <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                </button>
+                </button> */}
             </div>
         </div>
     );

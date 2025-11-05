@@ -1,5 +1,6 @@
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs'
 import ContactSection from '@/components/ContactSection/ContactSection'
+import Footer from '@/components/Footer'
 import OverlaySection, { OverlayCountSection } from '@/components/OverlaySection/OverlaySection'
 import PropertyCarousel from '@/components/PropertyCarousel/PropertyCarousel'
 import Reviews from '@/components/Reviews/Reviews'
@@ -14,10 +15,10 @@ const Home = () => {
       <div className="home_page">
         <div className="banner_section h-[100dvh] bg-[#242424] flex items-end justify-center" >
           {/* <h1 className='text-[84px] text-[white] z-10' >Architecture of <span className='text-[#3CBBCE]' >Being</span> </h1> */}
-          <h1 className='text-[clamp(48px, 4vw, 48px)] text-white z-10'>
+
+          <h1 className='text-[clamp(48px, 2vw, 84px)] text-white z-10' style={{ fontSize: "clamp(48px, 4vw, 84px)", textAlign: "center" }} >
             Architecture of <span className='text-[#3CBBCE]'>Being</span>
           </h1>
-
         </div>
 
         <div className="who_we_are_section"> <TitleText /> </div>
@@ -57,6 +58,7 @@ const Home = () => {
       <div className="home_contact_section" >
         <ContactSection />
       </div>
+      <Footer title='Ready to work with us ?' />
     </>
   )
 }

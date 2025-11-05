@@ -127,13 +127,13 @@
       @media (max-width: 768px) {
         gap: 20px;
         width: 100%;
-        justify-content: space-between;
+        justify-content: end;
       }
 
       .carousel_slide_count {
         display: flex;
         font-weight: 500;
-        font-size: 16px;
+        font-size: clamp(12px, 4vw, 16px);
         line-height: 180%;
         letter-spacing: 0%;
         color: #01020566;

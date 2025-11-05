@@ -5,6 +5,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import "./PropertyCarousel.scss"
 import { portfolios, PortfoliosType } from '@/lib/cms';
 import { useRouter } from 'next/navigation';
+import Button from '../Button/Button';
 
 
 const PropertyCarousel = () => {
@@ -84,23 +85,40 @@ const PropertyCarousel = () => {
                     <p className='property_address cursor-pointer' key={`address-${currentSlide}`}>{currentSlideData.location}</p>
                 </div>
                 <div className='carousel_buttons'>
-                    <button onClick={prevSlide} aria-label="Previous slide" disabled={isTransitioning}>
+                    <Button onClick={prevSlide} >
+                        <div>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M12 5L5 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                    </Button>
+                    {/* <button onClick={prevSlide} aria-label="Previous slide" disabled={isTransitioning}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M12 5L5 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                    </button>
+                    </button> */}
                     <div className='carousel_slide_count'>
                         <p key={`count-${currentSlide}`}>{String(currentSlide + 1).padStart(2, '0')}</p>
                         <span>/</span>
                         <p>{String(portfolios.length).padStart(2, '0')}</p>
                     </div>
-                    <button onClick={nextSlide} aria-label="Next slide" disabled={isTransitioning}>
+
+                    <Button onClick={nextSlide} aria-label="Next slide">
+                        <div>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                    </Button>
+                    {/* <button onClick={nextSlide} aria-label="Next slide" disabled={isTransitioning}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </div>
@@ -148,26 +166,33 @@ export const PropertyCarouselPerson = ({ item }: { item: PortfoliosType }) => {
             onMouseLeave={() => setIsPaused(false)}
         >
             <div className='carousel_track'>
-                {item.images.map((slide, index) => (
-                    <div
-                        key={index}
-                        className={`property_images ${index === currentSlide ? 'active' : ''} ${index < currentSlide ? 'prev' : 'next'}`}
-                    >
-
-                        <div className='property_image_wrapper'>
-                            <Image
-                                className='property_image'
-                                alt={`${slide} - Image ${index + 1}`}
-                                fill
-                                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                                src={slide}
-                                style={{ objectFit: 'cover' }}
-                                priority={index === 0 && index === 0}
-                            />
+                {item.images.map((slide, index) => {
+                    console.log("slide: ", slide)
+                    return (
+                        <div
+                            key={index}
+                            className={`property_images ${index === currentSlide ? 'active' : ''} ${index < currentSlide ? 'prev' : 'next'}`}
+                        >
+                            {
+                                slide.map((image, imageIndex) => {
+                                    return (
+                                        <div className='property_image_wrapper'>
+                                            <Image
+                                                className='property_image'
+                                                alt={`${image} - Image ${imageIndex + 1}`}
+                                                fill
+                                                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                                src={image}
+                                                style={{ objectFit: 'cover' }}
+                                                priority={imageIndex === 0 && imageIndex === 0}
+                                            />
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
-
-                    </div>
-                ))}
+                    )
+                })}
             </div>
 
             <div className='property_details'>
@@ -176,23 +201,40 @@ export const PropertyCarouselPerson = ({ item }: { item: PortfoliosType }) => {
                     <p className='property_address' key={`address-${currentSlide}`}>{item.location}</p>
                 </div>
                 <div className='carousel_buttons'>
-                    <button onClick={prevSlide} aria-label="Previous slide" disabled={isTransitioning}>
+                    {/* <button onClick={prevSlide} aria-label="Previous slide" disabled={isTransitioning}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M12 5L5 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                    </button>
+                    </button> */}
+                    <Button onClick={prevSlide} >
+                        <div>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M12 5L5 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                    </Button>
                     <div className='carousel_slide_count'>
                         <p key={`count-${currentSlide}`}>{String(currentSlide + 1).padStart(2, '0')}</p>
                         <span>/</span>
                         <p>{String(item.images.length).padStart(2, '0')}</p>
                     </div>
-                    <button onClick={nextSlide} aria-label="Next slide" disabled={isTransitioning}>
+
+                    <Button onClick={nextSlide} aria-label="Next slide">
+                        <div>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                    </Button>
+                    {/* <button onClick={nextSlide} aria-label="Next slide" disabled={isTransitioning}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </div>

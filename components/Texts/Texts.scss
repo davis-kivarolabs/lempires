@@ -1,6 +1,7 @@
 .texts_component {
   h1 {
     // font-family: Brockmann;
+    font-family: var(--font-heading), sans-serif;
     font-weight: 500;
     // font-size: 68px;
     font-size: clamp(20px, 4vw, 68px);
@@ -12,6 +13,7 @@
 
 .section_title {
   // font-family: Brockmann;
+  font-family: var(--font-heading), sans-serif;
   font-weight: 500;
   font-size: clamp(20px, 4vw, 48px);
   // line-height: 130%;
@@ -33,6 +35,7 @@
 
 .service_title {
   // font-family: Brockmann;
+  font-family: var(--font-heading), sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 130%;

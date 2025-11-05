@@ -3,9 +3,9 @@ import './globals.scss';
 import type { Metadata } from 'next';
 import { siteConfig } from '@/lib/siteConfig';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
 import { Plus_Jakarta_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -13,6 +13,13 @@ const plusJakarta = Plus_Jakarta_Sans({
   variable: '--font-plus-jakarta',
   display: 'swap',
 });
+
+const brockmann = localFont({
+  src: '../public/fonts/brockmann-medium.otf',
+  variable: '--font-brockmann',
+  weight: '500',
+});
+
 
 export const metadata: Metadata = {
   title: {
@@ -48,13 +55,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={plusJakarta.variable} >
+    <html lang="en" className={`${plusJakarta.variable} ${brockmann.variable}`} >
       <body>
         <Header />
         <SmoothScroll>
           <main>{children}</main>
         </SmoothScroll>
-        <Footer />
       </body>
     </html>
   );
