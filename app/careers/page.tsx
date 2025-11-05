@@ -17,6 +17,7 @@ const Careers = () => {
           <div className='flex gap-[25px]' >
             <div className='text-nowrap' >
               <SectionTitle title_1={"Build Legacies With Us"} txt_color="#010205" />
+              {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis odit nulla perspiciatis nisi labore perferendis nesciunt molestias nobis ea consequatur. Asperiores quasi magnam natus illo assumenda earum facilis enim quia.</p> */}
             </div>
             {/* <DescTexts color='#878C91' desc="Join a team where architecture meets artistry, and innovation blends with tradition. At L' empire Builders, we're not just constructing buildings—we're crafting environments that inspire." /> */}
           </div>

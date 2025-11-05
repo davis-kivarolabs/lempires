@@ -1,3 +1,4 @@
+import Achievements from '@/components/Achievements/Achievements'
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs'
 import ContactSection from '@/components/ContactSection/ContactSection'
 import Footer from '@/components/Footer'
@@ -38,19 +39,23 @@ const Home = () => {
           <Services />
         </div>
       </div>
-      <div className="home_reveiw_count_section" >
+
+      <Achievements font_color='#FFFFFF' bg_color="#242424" />
+
+      {/* <div className="home_reveiw_count_section" >
         <OverlayCountSection
           content_1={"HOMES DELIVERED"}
           content_2={"YEARS IN INDUSTRY"}
           content_3={"COUNTRY’S NRI CLIENTS"}
         />
-      </div>
+      </div> */}
+
       <div className='home_portfolio_section padding_section grid gap-[23px] bg-[#F7F6F1]' >
         <BreadCrumbs title='Portfolio' />
         <PropertyCarousel />
       </div>
 
-      <div className='home_reviews_section padding_section' >
+      <div className='home_reviews_section padding_section' style={{ paddingTop: "150px", paddingBottom: "150px" }} >
         <BreadCrumbs title='REVIEWS' />
         <Reviews />
       </div>

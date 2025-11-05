@@ -29,7 +29,7 @@ const Reviews = () => {
                 <div
                     className="carousel_inner"
                     style={{
-                        transform: `translateX(-${currentIndex * 100}%)`,
+                        transform: `translateX(-${currentIndex * 50}%)`,
                     }}
                 >
                     {Array.from({ length: totalSlides }).map((_, slideIndex) => {
@@ -37,7 +37,7 @@ const Reviews = () => {
                         const end = start + itemsPerSlide;
                         const slideReviews = reviews.slice(start, end);
                         return (
-                            <div className="carousel_slide" key={slideIndex}>
+                            <div className="carousel_slide" key={slideIndex} >
                                 {slideReviews.map((review, i) => (
                                     <Review key={i} {...review} />
                                 ))}

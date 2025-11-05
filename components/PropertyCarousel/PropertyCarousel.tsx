@@ -181,9 +181,10 @@ export const PropertyCarouselPerson = ({ item }: { item: PortfoliosType }) => {
                                                 className='property_image'
                                                 alt={`${image} - Image ${imageIndex + 1}`}
                                                 fill
+                                                // width={1257}
+                                                // height={698}
                                                 // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                                                 src={image}
-                                                style={{ objectFit: 'cover' }}
                                                 priority={imageIndex === 0 && imageIndex === 0}
                                             />
                                         </div>

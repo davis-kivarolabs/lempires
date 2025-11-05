@@ -12,22 +12,22 @@ const servicesData = [
     {
         title: "TURNKEY RESIDENCES",
         desc: "Complete architectural and interior solutions where vision meets reality. Each residence tells a unique story of client collaboration and design excellence.",
-        image: "/images/service_img.jpg",
+        image: "/images/services/TURNKEY RESIDENCES.png",
     },
     {
         title: "NRI DREAM PROJECTS",
         desc: "Space reimagining through strategic design interventions. Before-and-after journeys showcasing dramatic yet functional makeovers.",
-        image: "/images/service_img_2.jpg",
+        image: "/images/services/NRI DREAM PROJECTS.png",
     },
     {
         title: "INTERIOR TRANSFORMATIONS",
         desc: "Creative makeovers showcasing dramatic yet functional transformations.",
-        image: "/images/service_img.jpg",
+        image: "/images/services/INTERIOR TRANSFORMATIONS.png",
     },
     {
         title: "VAASTU-COMPLIANT DESIGNS",
         desc: "Architectural solutions balancing modern needs with ancient wisdom. Spaces that feel right and function perfectly.",
-        image: "/images/service_img_2.jpg",
+        image: "/images/services/VAASTU-COMPLIANT DESIGNS.png",
     },
 ];
 
@@ -75,13 +75,7 @@ const Services = () => {
                         <div key={index} className="mobile_service_block">
                             <ServicesTitle title={service.title} />
                             <DescTexts color="#878C91" desc={service.desc} />
-                            <Image
-                                src={service.image}
-                                alt={service.title}
-                                width={1200}
-                                height={800}
-                                className="mobile_service_image"
-                            />
+                            <Image src={service.image} alt={service.title} width={1200} height={800} className="mobile_service_image" style={{ objectFit: "contain" }} />
                         </div>
                     ))}
                     <div className="btn_wrap">

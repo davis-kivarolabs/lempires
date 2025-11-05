@@ -35,6 +35,9 @@
     }
 
     .founders_note_section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
         .breadcrumbs_wrapper_mob {
             display: none;
 
@@ -142,6 +145,9 @@
         display: flex;
         flex-direction: column;
         gap: 54px;
+
+        padding-top: 100px;
+        padding-bottom: 100px;
 
         @media (max-width: 1080px) {
             gap: 22px;

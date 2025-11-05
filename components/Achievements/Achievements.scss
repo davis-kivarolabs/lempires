@@ -1,0 +1,66 @@
+  .achievements_section {
+      background-color: #F7F6F1;
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 85px;
+
+      @media (max-width: 1024px) {
+          gap: 26px;
+      }
+
+      .lists {
+          display: flex;
+
+          .list {
+              width: 16.6666666667%;
+              display: flex;
+              align-items: start;
+              color: #010205;
+
+              &.content {
+                  display: flex;
+                  align-items: end;
+                  text-wrap: nowrap;
+                  gap: 30px;
+
+                  @media (max-width: 1024px) {
+                      gap: 8px;
+                      flex-direction: column;
+                      align-items: start;
+                      text-wrap: nowrap;
+                  }
+
+                  h2 {
+                      // font-family: Brockmann;
+                      font-family: var(--font-heading), sans-serif;
+                      font-weight: 500;
+                      font-size: clamp(24px, 4vw, 84px);
+                      line-height: 100%;
+                      letter-spacing: -3%;
+
+                      span {
+                          color: #3CBBCE;
+                      }
+
+                  }
+
+                  p {
+                      // font-family: Brockmann;
+                      font-family: var(--font-heading), sans-serif;
+                      font-weight: 500;
+                      //   font-size: 32px;
+                      font-size: clamp(14px, 4vw, 34px);
+                      line-height: 150%;
+                      letter-spacing: -3%;
+
+                      //   @media (max-width: 1024px) {
+                      //       text-wrap: wrap;
+                      //   }
+                  }
+              }
+          }
+      }
+  }

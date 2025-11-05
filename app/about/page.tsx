@@ -4,6 +4,8 @@ import Image from 'next/image';
 import React from 'react'
 import "./about.scss"
 import Footer from '@/components/Footer';
+import ApproachSection from '@/components/ApproachSection/ApproachSection';
+import Achievements from '@/components/Achievements/Achievements';
 
 const About = () => {
     return (
@@ -21,6 +23,8 @@ const About = () => {
                         <Image className='our_ethos_image' alt='about our ethos' src={"/images/about_our_ethos.jpg"} width={700} height={700} />
                     </div>
                 </div>
+
+                <Achievements />
 
                 <div className="founders_note_section padding_section">
                     <div className='breadcrumbs_wrapper_mob' >
@@ -56,6 +60,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+
+                <ApproachSection />
 
 
                 <div className="exhibitions_section padding_section">
