@@ -3,6 +3,7 @@ import { DescTexts, SectionTitle } from '@/components/Texts/Texts'
 import "../blogs.scss"
 import { blogs } from '@/lib/cms'
 import BlogContent from './BlogContent'
+import Footer from '@/components/Footer'
 
 interface BlogPageProps {
     params: {
@@ -14,18 +15,25 @@ const Page = ({ params }: BlogPageProps) => {
     const blog = blogs.find((item) => item.slug === params.slug);
 
     return (
-        <div className='blog_detail_page padding_section'>
-            <BreadCrumbs title='BLOG ' />
+        <>
+            <div className='blog_detail_page padding_section'>
+                <BreadCrumbs title='BLOG ' />
 
-            <div className='blog_wrapper'>
-                <div className='detailed_blog_title'>
-                    <SectionTitle title_1='Behind the Build:' title_2='What Makes a Home Truly Last?' />
-                    <DescTexts color='#878C91' desc='by lempire builders | Oct 13, 2025 | Blog, English' />
+                <div className='blog_wrapper'>
+                    <div className='detailed_blog_title'>
+                        <div style={{ width: "40%" }} >
+                            <SectionTitle title_1={blog?.title || ""} />
+                        </div>
+                        <DescTexts color='#878C91' desc={blog?.created_by || ""} />
+                        {/* <SectionTitle title_1='Behind the Build:' title_2='What Makes a Home Truly Last?' /> */}
+                        {/* <DescTexts color='#878C91' desc='by lempire builders | Oct 13, 2025 | Blog, English' /> */}
+                    </div>
+
+                    <BlogContent blog={blog} />
                 </div>
-
-                <BlogContent blog={blog} />
             </div>
-        </div>
+            <Footer />
+        </>
     )
 }
 

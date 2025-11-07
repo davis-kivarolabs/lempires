@@ -7,6 +7,7 @@ import PropertyCarousel from '@/components/PropertyCarousel/PropertyCarousel'
 import Reviews from '@/components/Reviews/Reviews'
 import Services from '@/components/Services/Services'
 import TitleText, { DescTexts, SectionTitle } from '@/components/Texts/Texts'
+import VideoBanner from '@/components/VideoBanner/VideoBanner'
 import React from 'react'
 
 
@@ -14,13 +15,12 @@ const Home = () => {
   return (
     <>
       <div className="home_page">
-        <div className="banner_section h-[100dvh] bg-[#242424] flex items-end justify-center" >
-          {/* <h1 className='text-[84px] text-[white] z-10' >Architecture of <span className='text-[#3CBBCE]' >Being</span> </h1> */}
-
+        <VideoBanner />
+        {/* <div className="banner_section h-[100dvh] bg-[#242424] flex items-end justify-center" >
           <h1 className='text-[clamp(48px, 2vw, 84px)] text-white z-10' style={{ fontSize: "clamp(48px, 4vw, 84px)", textAlign: "center" }} >
             Architecture of <span className='text-[#3CBBCE]'>Being</span>
           </h1>
-        </div>
+        </div> */}
 
         <div className="who_we_are_section"> <TitleText /> </div>
         <OverlaySection>

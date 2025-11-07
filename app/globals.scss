@@ -164,3 +164,20 @@ p {
     }
   }
 }
+
+
+
+.my-list {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+
+  li {
+    color: #4b5563;
+    line-height: 1.6;
+
+    @media screen and (max-width: 1024px) {
+      text-align: justify;
+    }
+  }
+}

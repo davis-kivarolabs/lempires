@@ -61,8 +61,8 @@ export const faqs = [
         title: "How long does a typical project take?",
         desc: [
           "Timelines vary by scope: ",
-          "• Interior transformations: 8-12 weeks",
-          "• Custom residences: 8-14 months We maintain transparent",
+          "Interior transformations: 8-12 weeks",
+          "Custom residences: 8-14 months We maintain transparent",
           "communication throughout, with regular progress updates and milestone tracking.",
         ],
       },
@@ -75,10 +75,10 @@ export const faqs = [
         title: "How do you ensure construction quality?",
         desc: [
           "Through rigorous protocols: ",
-          "• Premium material selection and verification",
-          "• Skilled artisan craftsmanship",
-          "• Multi-stage quality inspections",
-          "• Continuous project supervision",
+          "Premium material selection and verification",
+          "Skilled artisan craftsmanship",
+          "Multi-stage quality inspections",
+          "Continuous project supervision",
         ],
       },
       {
@@ -96,10 +96,10 @@ export const faqs = [
         title: "How is project costing structured?",
         desc: [
           "We provide: ",
-          "• Preliminary budget assessment during consultation",
-          "• Detailed transparent costing after design finalization",
-          "• Clear breakdown of all project components",
-          "• No hidden charges or surprise additions",
+          "Preliminary budget assessment during consultation",
+          "Detailed transparent costing after design finalization",
+          "Clear breakdown of all project components",
+          "No hidden charges or surprise additions",
         ],
       },
     ],
@@ -126,8 +126,8 @@ export const blogs: BlogType[] =
     {
       slug: "behind-the-build-what-makes-a-home-truly-last",
       title: "Behind the Build: What Makes a Home Truly Last?",
-      image: "",
-      created_by: "by lempire builders | Oct 13, 2025 | Blog, English",
+      image: "/images/blogs/behind_the_build.png",
+      created_by: "by L'empire builders | Oct 13, 2025 | Blog, English",
       contents: [
         {
           title: "Introduction: Building Beyond Bricks and Mortar",
@@ -227,7 +227,78 @@ export const blogs: BlogType[] =
           ]
         }
       ]
-    }
+    },
+    {
+      slug: "interior-design-struggles-clients-face-in-kerala",
+      title: "Interior Design Struggles Clients Face in Kerala",
+      image: "/images/blogs/interior_design_struggles.jpg",
+      created_by: "by lempire builders | Oct 10, 2025 | Blog, English, Interior",
+      contents: [
+        {
+          title: "I Don’t Know Where to Start – The Overwhelm of Beginning",
+          image: "",
+          desc: ["For many first-time home builders and families, the entire process can feel overwhelming. It’s often unclear what should come first—floor plans or interior design—and how to balance lighting, furniture placement, and vastu principles together. Without a structured approach, people end up coordinating multiple freelancers, carpenters, and vendors on their own, leading to confusion, delays, and unsatisfactory results.", "To avoid this, it’s important to choose turnkey services that provide complete support from planning to execution. L’empire Builders offers end-to-end guidance, including space planning, 3D visualizations, and on-ground execution. With 1:1 consultations and a clear step-by-step process, clients always know what to expect at every stage of their project."]
+        },
+        {
+          title: "Hidden Interior Design Costs & Budget Anxiety in Kerala",
+          image: "",
+          desc: ["One of the biggest concerns homeowners face is unexpected budget escalation. Many start with a quoted amount—like ₹5 lakhs—only to be told midway that the cost has risen to ₹9 lakhs. This kind of scope creep is common, especially when quotes are vague, material pricing isn’t transparent, or additional work keeps getting added without clarity.", "The solution is to work with teams who prioritize transparency. Look for detailed BOQs, package-based pricing, and clear lists of what’s included and what’s not. With L’empire Builders’ custom design packages, every cost is clearly defined from the beginning, ensuring you know exactly what you are paying for with no hidden surprises."]
+        },
+        {
+          title: "Poor Execution & Delays",
+          image: "",
+          desc: ["Many homeowners experience this: you finalize a beautiful design, pay the advance, and then communication stops. Weeks pass, and when you check the site, the execution looks nothing like what was promised. This usually happens due to the absence of proper project management, unskilled labor, and poor on-site supervision, leading to misalignment between design and reality.", "To avoid this, choose a team that offers dedicated site engineers, a defined project timeline, and consistent weekly progress updates. Clear accountability and structured execution ensure the final result matches the design you approved."]
+        },
+        {
+          title: "Remote Control Problems (Especially for NRIs)",
+          image: "",
+          desc: ["For Malayalis living abroad in the Gulf, UK, or US, managing an interior project back home can feel uncertain and stressful. Without the ability to visit the site, many are left relying on occasional photos and fragmented updates, making the entire process feel like they’re working blind.", "This lack of transparency often leads to trust issues and a disconnect from the project’s progress and quality. NRIs deserve a system that keeps them involved and informed, ensuring their vision is executed exactly as intended—even from thousands of miles away."]
+        },
+        {
+          title: "Interior Designs That Don’t Match Your Lifestyle",
+          image: "",
+          desc: ["Many interiors may look appealing in photos but fail to work in everyday life. Common problems include limited storage, poor lighting planning, and kitchens or work-from-home spaces that don’t support real usage. For young professionals and newly married couples, generic, one-size-fits-all layouts often feel impractical and uninspiring.", "To avoid this, work with designers who take time to understand your routine, habits, and lifestyle—not just your budget. At L’empire Builders, interiors are customized to be modern, functional, and minimal, with smart modular solutions that align with the needs of tech-savvy homeowners."]
+        },
+        {
+          title: "Poor Communication & Vanishing Designers",
+          image: "",
+          desc: ["Many clients face the frustration of poor communication during interior projects. Messages get ignored, revisions take far too long, and some designers even disappear after receiving the final payment. This leaves homeowners feeling stuck, helpless, and burdened with an incomplete or poorly executed space.", "To prevent this, work with teams that have clear service-level agreements, structured communication practices, and a full support team rather than a single freelancer. With L’empire Builders, you receive a dedicated point of contact who provides consistent updates, manages follow-ups, and stays with you through execution, handover, and post-completion support."]
+        },
+        {
+          title: "Conclusion: Don’t Let Frustration Ruin Your Dream Home",
+          image: "",
+          desc: ["Interior design shouldn’t feel overwhelming. With the right team guiding you, the process can be enjoyable, creative, and deeply meaningful. Whether you’re a Kerala family seeking a peaceful home, an NRI building from abroad, or a young achiever wanting a modern aesthetic, your space should reflect your life and aspirations.", "Your dream deserves a process rooted in clarity and care. With thoughtful planning, transparent communication, and a team committed to execution, you can build a home that feels personal, functional, and truly yours."]
+        },
+      ]
+    },
+    {
+      slug: "best-time-to-build-a-house-in-kerala-seasonal-guide",
+      title: "Best Time to Build a House in Kerala | Seasonal Guide",
+      image: "/images/blogs/best_time_to_build.png",
+      created_by: "by lempire builders | Oct 6, 2025 | Blog, English",
+      contents: [
+        {
+          title: "Understanding Kerala’s Weather and Why It Matters",
+          image: "",
+          desc: ["Kerala’s climate includes four major phases: summer, the southwest monsoon, the northeast monsoon, and winter. Each of these seasons has a unique impact on building materials, work timelines, and quality control. Poor planning around weather often leads to delays, structural issues, and budget overruns.", "At L’empire Builders, we understand Kerala’s climate inside-out — and help you plan smartly, ensuring on-time project completion with quality assurance."]
+        },
+        {
+          title: "Seasonal House Construction Guide for Kerala",
+          image: "",
+          desc: ["Summer (February to May) is generally the best time to begin home construction in Kerala. The dry climate and lower humidity create ideal conditions for foundation work, structural construction, roof slab casting, and wall building. Cement curing is more efficient during this period, and the soil remains stable, making it a reliable phase to start major construction activities.", "During the monsoon season (June to September), frequent rain, moisture, and the risk of flooding make construction difficult. Heavy structural work should be minimized or avoided during this time. Instead, this period is better used for planning, material procurement, design development, or interior concept discussions. Avoid starting foundation or concrete work in monsoon conditions to prevent structural issues later."]
+        },
+        {
+          title: "Winter (December to January): Ideal for Completion",
+          image: "",
+          desc: ["Post-monsoon to early winter offers another favorable phase for construction finishing. The weather remains stable with low humidity, allowing paint to dry evenly and woodwork to settle without moisture-related warping. This makes it an ideal time for tasks like painting, installing modular fittings, completing cabinetry, and handling exterior or landscape work.", "During this period, it's wise to finalize all interior and exterior finishing details to ensure optimal quality and durability. The controlled climate supports smoother execution, resulting in a polished, long-lasting finish for your home."]
+        },
+        {
+          title: "Plan Smart with Kerala’s Climate for Better Home Construction",
+          image: "",
+          desc: ["Starting your project in late January or early February is ideal for uninterrupted progress and consistent quality. This timing offers sufficient dry months to complete major structural work before the monsoon sets in, reducing delays and weather-related complications. At L’empire Builders, we plan construction timelines around seasonal patterns to ensure maximum efficiency and minimal risk.", "Smart seasonal planning delivers clear advantages: faster project completion, reduced material wastage, better cement curing and structural integrity, controlled budgets with fewer delays, and smoother, stress-free progress from start to finish."]
+        },
+      ]
+    },
   ]
 
 
@@ -268,6 +339,89 @@ export const portfolios: PortfoliosType[] = [
       [
         "/images/portfolio/dr_sumesh_residence/pic_3.png",
       ]
+    ]
+  },
+  {
+    id: 3,
+    title: "MR. ROSHIN’S RESIDENCE",
+    location: "Pala, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_roshans_residence/pic_1.png"
+      ]
+    ]
+  },
+  {
+    id: 4,
+    title: "MR. JEFRIN’S RESIDENCE",
+    location: "Ernakulam, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_jefrins_residence/pic_1.png"
+      ]
+    ]
+  },
+  {
+    id: 5,
+    title: "MR. MANAIKH LAL’S RESIDENCE",
+    location: "Thrissur, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_manaikh_lals_residence/pic_1.png"
+      ]
+    ]
+  },
+  {
+    id: 6,
+    title: "MR. ANOOP’S RESIDENCE",
+    location: "Manvettom, Kottayam, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_anoops_residence/pic_1.png"
+      ],
+      [
+        "/images/portfolio/mr_anoops_residence/pic_2.1.png",
+        "/images/portfolio/mr_anoops_residence/pic_2.2.png"
+      ]
+    ]
+  },
+  {
+    id: 7,
+    title: "MR. JACOB’S RESIDENCE",
+    location: "Thiruvalla, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_jacobs_residence/pic_1.png"
+      ],
+      [
+        "/images/portfolio/mr_jacobs_residence/pic_2.png"
+      ],
+      [
+        "/images/portfolio/mr_jacobs_residence/pic_3.png"
+      ],
+    ]
+  },
+  {
+    id: 8,
+    title: "MR. AJIN’S RESIDENCE",
+    location: "Kuruppumthara, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_ajins_residence/pic_1.png"
+      ],
+    ]
+  },
+  {
+    id: 9,
+    title: "MR. KIRAN’S RESIDENCE",
+    location: "Mavelikkara, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_kirans_residence/pic_1.png"
+      ],
+      [
+        "/images/portfolio/mr_kirans_residence/pic_2.png"
+      ],
     ]
   },
 ]

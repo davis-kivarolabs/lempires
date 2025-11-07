@@ -44,14 +44,16 @@ const BlogContent = ({ blog }: { blog: BlogType | undefined }) => {
                 <Image
                     className='details_blog_image'
                     alt='blog'
-                    src={"/images/portfolio/MR. RIYAS RESIDENCE_1.jpg"}
+                    src={blog?.image || ""}
                     width={614}
-                    height={384}
+                    height={500}
                 />
 
                 <div className='detailed_blog_title_mob'>
-                    <SectionTitle title_1='Behind the Build:' title_2='What Makes a Home Truly Last?' />
-                    <DescTexts color='#878C91' desc='by lempire builders | Oct 13, 2025 | Blog, English' />
+                    <SectionTitle title_1={blog?.title || ""} />
+                    <DescTexts color='#878C91' desc={blog?.created_by || ""} />
+                    {/* <SectionTitle title_1='Behind the Build:' title_2='What Makes a Home Truly Last?' /> */}
+                    {/* <DescTexts color='#878C91' desc='by lempire builders | Oct 13, 2025 | Blog, English' /> */}
                 </div>
 
                 <div className='blog_description'>

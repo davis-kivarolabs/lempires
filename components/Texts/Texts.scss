@@ -31,6 +31,10 @@
   font-size: 16px;
   line-height: 180%;
   letter-spacing: 0%;
+
+  @media (max-width: 1024px) {
+    text-align: justify;
+  }
 }
 
 .service_title {

@@ -19,7 +19,7 @@ const Blog = ({ data }: { data: BlogType }) => {
             <Image
                 className='blog_image'
                 alt='blog'
-                src={"/images/portfolio/MR. RIYAS RESIDENCE_1.jpg"}
+                src={data.image}
                 width={407}
                 height={254}
             />
@@ -28,7 +28,7 @@ const Blog = ({ data }: { data: BlogType }) => {
                     <h1>{data.title}</h1>
                     <p>{data.created_by}</p>
                 </div>
-                <DescTexts color='#878C91' desc='When you picture your dream home, you might imagine stylish interiors, warm lighting, and the joy of walking into your very own space. But a truly lasting home is much more than what you see.' />
+                <DescTexts color='#878C91' desc={data.contents[0].desc[0]} />
                 <PrimaryButton onClick={() => handleRedirect(data.slug)} bgColor='transparent' label='READ MORE' />
             </div>
         </div>

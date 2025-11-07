@@ -36,10 +36,11 @@ const Accordion = ({ title, content }: AccordionProps) => {
                 style={{ maxHeight: height }}
                 className="overflow-hidden transition-all duration-500 ease-in-out"
             >
-                {
-                    content.map((item, i) => <div key={i} className="pb-4 text-gray-600 leading-relaxed" >{item}</div>)
-                    // content.map((item) => <DescTexts color="#878C91" desc={item} />)
-                }
+                <ul className="my-list">
+                    {content.map((item, i) => (
+                        <li key={i}>{item}</li>
+                    ))}
+                </ul>
             </div>
         </div>
     );

@@ -54,16 +54,23 @@ const Services = () => {
 
                 {/* DESKTOP SERVICE TEXT */}
                 <div className="desktop_services">
-                    {servicesData.map((service, index) => (
-                        <AnimatedService
-                            key={index}
-                            index={index}
-                            total={servicesData.length}
-                            title={service.title}
-                            desc={service.desc}
-                            scrollYProgress={scrollYProgress}
-                        />
-                    ))}
+                    {servicesData.map((service, index) => {
+                        return (
+                            <>
+                                <AnimatedService
+                                    key={index}
+                                    index={index}
+                                    total={servicesData.length}
+                                    title={service.title}
+                                    desc={service.desc}
+                                    scrollYProgress={scrollYProgress}
+                                />
+                                {/* <div className="btn_wrap">
+                                    <PrimaryButton label="MORE ABOUT US" />
+                                </div> */}
+                            </>
+                        )
+                    })}
                     <div className="btn_wrap">
                         <PrimaryButton label="MORE ABOUT US" />
                     </div>
@@ -101,24 +108,13 @@ const Services = () => {
     );
 };
 
-const AnimatedService = ({
-    title,
-    desc,
-    index,
-    total,
-    scrollYProgress,
-}: {
-    title: string;
-    desc: string;
-    index: number;
-    total: number;
-    scrollYProgress: any;
-}) => {
+const AnimatedService = ({ title, desc, index, total, scrollYProgress }: { title: string; desc: string; index: number; total: number; scrollYProgress: any }) => {
     const step = 1 / total;
     const start = index * step;
     const end = (index + 1) * step;
     const opacity = useTransform(scrollYProgress, [start, start + 0.1], [0, 1]);
-    const y = useTransform(scrollYProgress, [start, start + 0.1], [40, 0]);
+    const y = useTransform(scrollYProgress, [start, start + 0.1], [600, 0]);
+    // const y = useTransform(scrollYProgress, [start, start + 0.1], [40, 0]);
 
     return (
         <motion.div
@@ -135,19 +131,8 @@ const AnimatedService = ({
     );
 };
 
-const CrossfadeImage = ({
-    image,
-    index,
-    total,
-    scrollYProgress,
-    imageY,
-}: {
-    image: string;
-    index: number;
-    total: number;
-    scrollYProgress: any;
-    imageY: any;
-}) => {
+const CrossfadeImage = ({ image, index, total, scrollYProgress, imageY,
+}: { image: string; index: number; total: number; scrollYProgress: any; imageY: any; }) => {
     const step = 1 / total;
     const start = index * step;
     const end = (index + 1) * step;

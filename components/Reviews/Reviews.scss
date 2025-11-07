@@ -144,6 +144,10 @@
       line-height: 180%;
       letter-spacing: 0%;
       color: #878C91;
+
+      @media (max-width: 1024px) {
+        text-align: justify;
+      }
     }
   }
 }
