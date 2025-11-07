@@ -4,6 +4,12 @@ import { PropertyCarouselPerson } from '@/components/PropertyCarousel/PropertyCa
 import { portfolios } from '@/lib/cms';
 import React from 'react'
 
+export const metadata = {
+    title: "Portfolio",
+    description: "Portfolio",
+};
+
+
 const portfolio = () => {
     return (
         <>

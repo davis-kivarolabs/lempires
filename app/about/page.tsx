@@ -7,6 +7,11 @@ import Footer from '@/components/Footer';
 import ApproachSection from '@/components/ApproachSection/ApproachSection';
 import Achievements from '@/components/Achievements/Achievements';
 
+export const metadata = {
+    title: "About Us",
+    description: "About Us",
+};
+
 const About = () => {
     return (
         <>

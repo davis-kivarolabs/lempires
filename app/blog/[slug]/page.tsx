@@ -1,13 +1,23 @@
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs'
 import { DescTexts, SectionTitle } from '@/components/Texts/Texts'
 import "../blogs.scss"
-import { blogs } from '@/lib/cms'
+import { blogs, getPost } from '@/lib/cms'
 import BlogContent from './BlogContent'
 import Footer from '@/components/Footer'
 
 interface BlogPageProps {
     params: {
         slug: string;
+    };
+}
+
+export async function generateMetadata({ params }: { params: any }) {
+    const post = await getPost(params.slug);
+    console.log("ddd", post)
+
+    return {
+        title: post?.title,
+        description: post?.contents[0],
     };
 }
 

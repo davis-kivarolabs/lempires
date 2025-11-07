@@ -6,6 +6,11 @@ import "./faq.scss"
 import { faqs } from '@/lib/cms'
 import Footer from '@/components/Footer'
 
+export const metadata = {
+    title: "Frequently asked questions",
+    description: "Frequently asked questions",
+};
+
 
 const FAQ = () => {
     return (

@@ -5,6 +5,11 @@ import Blog from '@/components/Blog'
 import { blogs } from '@/lib/cms'
 import Footer from '@/components/Footer'
 
+export const metadata = {
+    title: "Blogs",
+    description: "Blogs",
+};
+
 const Blogs = () => {
     return (
         <>

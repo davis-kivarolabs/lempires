@@ -8,6 +8,12 @@ import TextareaField from '@/components/InputField/TextareaField';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 
+export const metadata = {
+    title: "Contact",
+    description: "Contact",
+};
+
+
 const Contact = () => {
   return (
     <>

@@ -10,6 +10,10 @@ import TitleText, { DescTexts, SectionTitle } from '@/components/Texts/Texts'
 import VideoBanner from '@/components/VideoBanner/VideoBanner'
 import React from 'react'
 
+export const metadata = {
+  title: "Home page",
+  description: "Home page",
+};
 
 const Home = () => {
   return (

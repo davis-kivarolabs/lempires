@@ -7,6 +7,12 @@ import { PrimaryButton } from '@/components/Button/Button';
 import TextareaField from '@/components/InputField/TextareaField';
 import Footer from '@/components/Footer';
 
+export const metadata = {
+  title: "Careers",
+  description: "Careers",
+};
+
+
 const Careers = () => {
   return (
     <>
