@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: any }) {
 
     return {
         title: post?.title,
-        description: post?.contents[0],
+        description: post?.contents[0]?.desc[0],
     };
 }
 
