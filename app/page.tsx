@@ -2,7 +2,7 @@ import Achievements from '@/components/Achievements/Achievements'
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs'
 import ContactSection from '@/components/ContactSection/ContactSection'
 import Footer from '@/components/Footer'
-import OverlaySection, { OverlayCountSection } from '@/components/OverlaySection/OverlaySection'
+import OverlaySection from '@/components/OverlaySection/OverlaySection'
 import PropertyCarousel from '@/components/PropertyCarousel/PropertyCarousel'
 import Reviews from '@/components/Reviews/Reviews'
 import Services from '@/components/Services/Services'
@@ -11,8 +11,8 @@ import VideoBanner from '@/components/VideoBanner/VideoBanner'
 import React from 'react'
 
 export const metadata = {
-  title: "Home page",
-  description: "Home page",
+  title: "L’empire Builders | Best Builders in Kerala",
+  description: "We handle complete turnkey construction -from 2D planning and 3D designing to full execution and key handover. With 5+ years of experience and 50+ homes delivered across Kerala, we bring your dream home to life effortlessly.",
 };
 
 const Home = () => {
@@ -26,7 +26,8 @@ const Home = () => {
           </h1>
         </div> */}
 
-        <div className="who_we_are_section"> <TitleText /> </div>
+        <div className="who_we_are_section"><TitleText /></div>
+
         <OverlaySection>
           <div className="home_aboutus_section padding_section">
             <div className='home_aboutus_section_titles' >
@@ -73,32 +74,3 @@ const Home = () => {
 }
 
 export default Home;
-
-
-// 'use client'
-
-// import OverlaySection from '@/components/OverlaySection/OverlaySection'
-// import React from 'react'
-// import { motion } from 'framer-motion'
-
-// const Home = () => {
-//   return (
-//     <div className='home_page'>
-
-
-//       <div className='who_we_are_section' >
-//         <motion.p
-//           initial={{ opacity: 0 }}
-//           animate={{ opacity: 1 }}
-//           className="text-[40px] font-bold"
-//         >
-//           <h1>We are Architects of Environment & <br /> Curators of Space</h1>
-//         </motion.p>
-//       </div>
-
-//       <OverlaySection />
-//     </div>
-//   )
-// }
-
-// export default Home;

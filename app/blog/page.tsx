@@ -6,8 +6,8 @@ import { blogs } from '@/lib/cms'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-    title: "Blogs",
-    description: "Blogs",
+    title: "L’empire Builders Blog | Expert Tips on Building Better Homes",
+    description: "Read expert blogs filled with tips, trends, and inspiration for creating thoughtful, well-designed living spaces. Learn, explore, and stay updated with fresh insights.",
 };
 
 const Blogs = () => {

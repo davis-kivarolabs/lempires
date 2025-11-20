@@ -152,7 +152,7 @@ export const PropertyCarouselPerson = ({ item }: { item: PortfoliosType }) => {
 
         const interval = setInterval(() => {
             nextSlide();
-        }, 10000);
+        }, 100000);
 
         return () => clearInterval(interval);
     }, [isPaused, nextSlide]);
@@ -191,6 +191,24 @@ export const PropertyCarouselPerson = ({ item }: { item: PortfoliosType }) => {
                                     )
                                 })
                             }
+                            {/* {
+                                slide.map((image, imageIndex) => {
+                                    return (
+                                        <div className='property_image_wrapper'>
+                                            <Image
+                                                className='property_image'
+                                                alt={`${image} - Image ${imageIndex + 1}`}
+                                                fill
+                                                // width={1257}
+                                                // height={698}
+                                                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                                src={image}
+                                                priority={imageIndex === 0 && imageIndex === 0}
+                                            />
+                                        </div>
+                                    )
+                                })
+                            } */}
                         </div>
                     )
                 })}

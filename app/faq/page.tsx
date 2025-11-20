@@ -7,8 +7,8 @@ import { faqs } from '@/lib/cms'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-    title: "Frequently asked questions",
-    description: "Frequently asked questions",
+    title: "FAQs | L’empire Builders | Construction & Design Questions",
+    description: "Find answers to common questions about design process, project timelines, quality standards, costing, and home renewal services. Get clarity before you build.",
 };
 
 

@@ -20,11 +20,17 @@ const OverlaySection = ({ children }: { children: any }) => {
     });
 
     // Map scroll progress to viewport height (not section height)
-    const height1 = useTransform(smoothScroll, [0, 1], ['0vh', '100vh']);
-    const height2 = useTransform(smoothScroll, [0, 1], ['0vh', '75vh']);
-    const height3 = useTransform(smoothScroll, [0, 1], ['0vh', '50vh']);
-    const height4 = useTransform(smoothScroll, [0, 1], ['0vh', '35vh']);
-    const height5 = useTransform(smoothScroll, [0, 1], ['0vh', '10vh']);
+    const height1 = useTransform(smoothScroll, [0, 1], ['100vh', '50vh']);
+    const height2 = useTransform(smoothScroll, [0, 1], ['75vh', '50vh']);
+    const height3 = useTransform(smoothScroll, [0, 1], ['50vh', '50vh']);
+    const height4 = useTransform(smoothScroll, [0, 1], ['35vh', '50vh']);
+    const height5 = useTransform(smoothScroll, [0, 1], ['10vh', '50vh']);
+
+    // const height1 = useTransform(smoothScroll, [0, 1], ['0vh', '100vh']);
+    // const height2 = useTransform(smoothScroll, [0, 1], ['0vh', '75vh']);
+    // const height3 = useTransform(smoothScroll, [0, 1], ['0vh', '50vh']);
+    // const height4 = useTransform(smoothScroll, [0, 1], ['0vh', '35vh']);
+    // const height5 = useTransform(smoothScroll, [0, 1], ['0vh', '10vh']);
 
     return (
         <section ref={ref} className="overlay-section-wrapper">

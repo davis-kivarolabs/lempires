@@ -5,8 +5,8 @@ import { portfolios } from '@/lib/cms';
 import React from 'react'
 
 export const metadata = {
-    title: "Portfolio",
-    description: "Portfolio",
+    title: "L’empire Builders Portfolio | Completed Home Projects in Kerala",
+    description: "Discover our completed home projects showcasing design quality, construction detail, and client-focused execution across various locations in Kerala.",
 };
 
 

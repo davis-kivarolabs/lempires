@@ -6,11 +6,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const Footer = ({ title }: { title?: string; }) => {
+    // href="tel:+917012191993"
+
+    // const router = useRouter();
+
+    const handleRedirect = () => {
+        // router.push(`/blog/${title}`);
+        window.location.href = "tel:+917012191993"
+    };
+
     return (
         <div className='footer_section' >
             <div className='footer_title_section' >
                 <h2>{title || "Ready to work with us ?"}</h2>
-                <PrimaryButton label='CONSULT NOW' />
+                <PrimaryButton onClick={handleRedirect} label='CONSULT NOW' />
             </div>
             <div className='contents_wrap' >
                 <div className='logo_decs_social grid gap-[30px]' >

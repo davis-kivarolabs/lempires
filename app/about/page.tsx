@@ -8,8 +8,8 @@ import ApproachSection from '@/components/ApproachSection/ApproachSection';
 import Achievements from '@/components/Achievements/Achievements';
 
 export const metadata = {
-    title: "About Us",
-    description: "About Us",
+    title: "About Us - L’empire Builders | Kerala’s Trusted Home Construction Experts",
+    description: "Discover L’empire Builders, Kerala’s reliable turnkey construction team committed to trusted service, smart technology, and seamless execution across every project.",
 };
 
 const About = () => {
@@ -25,7 +25,7 @@ const About = () => {
                     </div>
                     <div className='content' >
                         <DescTexts color='#878C91' desc="At L'empire Builders, we believe great spaces should feel right from the moment you enter. We create homes that balance beautiful design with practical living, blending timeless Vaastu principles with contemporary comfort. Our approach is simple: listen deeply, design intentionally, and deliver spaces where life unfolds naturally." />
-                        <Image className='our_ethos_image' alt='about our ethos' src={"/images/about_our_ethos.jpg"} width={700} height={700} />
+                        <Image className='our_ethos_image' alt='about our ethos' src={"/images/about_our_ethos.avif"} width={700} height={700} />
                     </div>
                 </div>
 

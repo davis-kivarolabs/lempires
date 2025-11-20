@@ -2,6 +2,7 @@
   background-color: transparent;
   // background-color: white;
   height: 90dvh;
+  // height: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -50,31 +51,11 @@
       flex: 1;
       min-width: 0;
       overflow: hidden;
-      // background-color: #f0f0f0;
-      // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      // transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-      //   box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
       .property_image {
         transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-
-        // min-width: 1257px;
-        // min-height: 698px;
-
-        // max-width: 1257px;
-        // max-height: 698px;
-
         object-fit: cover;
       }
-
-      // &:hover {
-      //   transform: translateY(-4px);
-      //   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-
-      //   .property_image {
-      //     transform: scale(1.05);
-      //   }
-      // }
     }
   }
 

@@ -9,10 +9,9 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export const metadata = {
-    title: "Contact",
-    description: "Contact",
+  title: "Contact L’empire Builders | Kerala’s Trusted Home Builders",
+  description: "Connect with L’empire Builders for inquiries, consultations, or project discussions",
 };
-
 
 const Contact = () => {
   return (

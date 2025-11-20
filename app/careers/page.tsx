@@ -8,8 +8,8 @@ import TextareaField from '@/components/InputField/TextareaField';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: "Careers",
-  description: "Careers",
+  title: "L’empire Builders Careers | Build Your Future With Us",
+  description: "Explore career opportunities at L’empire Builders and join a dedicated team focused on quality construction, thoughtful design, and lasting craftsmanship.",
 };
 
 

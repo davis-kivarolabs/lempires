@@ -36,9 +36,9 @@ const Header = () => {
             <nav className="navlinks">
                 <Link href="/" className="navlink">Home</Link>
                 <Link href="/about" className="navlink">About</Link>
-                <Link href="/blog" className="navlink">Blog</Link>
-                <Link href="/faq" className="navlink">FAQ</Link>
                 <Link href="/portfolio" className="navlink">Portfolio</Link>
+                <Link href="/faq" className="navlink">FAQ</Link>
+                <Link href="/blog" className="navlink">Blog</Link>
                 <Link href="/careers" className="navlink">Careers</Link>
                 <Link href="/contact" className="navlink">Contact</Link>
             </nav>
@@ -62,9 +62,9 @@ const Header = () => {
                     <ul>
                         <li onClick={closeMenu}><Link href="/">Home</Link></li>
                         <li onClick={closeMenu}><Link href="/about">About</Link></li>
-                        <li onClick={closeMenu}><Link href="/blog">Blog</Link></li>
-                        <li onClick={closeMenu}><Link href="/faq">FAQ</Link></li>
                         <li onClick={closeMenu}><Link href="/portfolio">Portfolio</Link></li>
+                        <li onClick={closeMenu}><Link href="/faq">FAQ</Link></li>
+                        <li onClick={closeMenu}><Link href="/blog">Blog</Link></li>
                         <li onClick={closeMenu}><Link href="/careers">Careers</Link></li>
                         <li onClick={closeMenu}><Link href="/contact">Contact</Link></li>
                     </ul>

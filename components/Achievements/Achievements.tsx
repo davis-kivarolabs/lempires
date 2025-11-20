@@ -3,8 +3,8 @@
 import "./Achievements.scss"
 const Achievements = ({ bg_color, font_color }: { bg_color?: string; font_color?: string; }) => {
     const homeDelivered: any = useCountUp(250);
-    const yearsIndustry: any = useCountUp(15);
-    const nriClients: any = useCountUp(7);
+    const yearsIndustry: any = useCountUp(5);
+    const nriClients: any = useCountUp(50);
 
     return (
         <div className='achievements_section padding_section' style={{ backgroundColor: bg_color }} >
@@ -23,7 +23,7 @@ const Achievements = ({ bg_color, font_color }: { bg_color?: string; font_color?
                 <div className='list' ></div>
                 <div className='list content' style={{ color: font_color }} >
                     <h2 ref={homeDelivered.ref}>{homeDelivered.count} <span>+</span></h2>
-                    <p>HOMES DELIVERED</p>
+                    <p>DESIGNS COMPLETED</p>
                 </div>
                 <div className='list' ></div>
                 <div className='list' ></div>
@@ -32,24 +32,25 @@ const Achievements = ({ bg_color, font_color }: { bg_color?: string; font_color?
             </div>
 
             <div className='lists' >
+                <div className='list' ></div>
+                <div className='list' ></div>
+                <div className='list content' style={{ color: font_color }} >
+                    <h2 ref={nriClients.ref}>{nriClients.count} <span>+</span></h2>
+                    <p>HOMES DELIVERED</p>
+                    {/* <p>COUNTRY’S NRI CLIENTS</p> */}
+                </div>
+                <div className='list' ></div>
+                <div className='list' ></div>
+                <div className='list' ></div>
+            </div>
+
+            <div className='lists' >
+                <div className='list' ></div>
                 <div className='list' ></div>
                 <div className='list' ></div>
                 <div className='list content' style={{ color: font_color }} >
                     <h2 ref={yearsIndustry.ref}>{yearsIndustry.count} <span>+</span></h2>
                     <p>YEARS IN INDUSTRY</p>
-                </div>
-                <div className='list' ></div>
-                <div className='list' ></div>
-                <div className='list' ></div>
-            </div>
-
-            <div className='lists' >
-                <div className='list' ></div>
-                <div className='list' ></div>
-                <div className='list' ></div>
-                <div className='list content' style={{ color: font_color }} >
-                    <h2 ref={nriClients.ref}>{nriClients.count} <span>+</span></h2>
-                    <p>COUNTRY’S NRI CLIENTS</p>
                 </div>
                 <div className='list' ></div>
                 <div className='list' ></div>

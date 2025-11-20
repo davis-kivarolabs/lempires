@@ -10,6 +10,7 @@ const Reviews = () => {
     // Detect if screen is mobile
     const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
     const itemsPerSlide = isMobile ? 1 : 2;
+    // const itemsPerSlide = 2; 
 
     const totalSlides = Math.ceil(reviews.length / itemsPerSlide);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,10 +27,9 @@ const Reviews = () => {
         <div className="review_carousel">
             {/* Slider Container */}
             <div className="carousel_track">
-                <div
-                    className="carousel_inner"
+                <div className="carousel_inner"
                     style={{
-                        transform: `translateX(-${currentIndex * 50}%)`,
+                        transform: `translateX(-${currentIndex * (isMobile ? 100 : 50)}%)`,
                     }}
                 >
                     {Array.from({ length: totalSlides }).map((_, slideIndex) => {
