@@ -67,9 +67,9 @@ const Contact = () => {
                     </div>
                   </Link>
 
-                  <Link href="https://share.google/ywVrO3P45QTmDUsE7" target='_blank' >
+                  {/* <Link href="https://share.google/ywVrO3P45QTmDUsE7" target='_blank' >
                     <p>Lempire Builders <br /> '#975 B', Vallamattam Building <br /> Perumbaikadu PO <br /> Kottayam</p>
-                  </Link>
+                  </Link> */}
                 </div>
 
                 <div className='flex' style={{ justifyContent: "space-between" }} >
@@ -89,9 +89,9 @@ const Contact = () => {
                     </div>
                   </Link>
 
-                  <Link href="https://share.google/ywVrO3P45QTmDUsE7" target='_blank' >
+                  {/* <Link href="https://share.google/ywVrO3P45QTmDUsE7" target='_blank' >
                     <p>Lempire Builders <br /> '#975 B', Vallamattam Building <br /> Perumbaikadu PO <br /> Kottayam</p>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
