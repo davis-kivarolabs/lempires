@@ -31,7 +31,7 @@ const About = () => {
 
                 <Achievements />
 
-                {/* <div className="founders_note_section padding_section">
+                <div className="founders_note_section padding_section">
                     <div className='breadcrumbs_wrapper_mob' >
                         <BreadCrumbs title='FOUNDER’S NOTE ' />
                     </div>
@@ -64,7 +64,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
                 <ApproachSection />
 

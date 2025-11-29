@@ -201,7 +201,7 @@ export const blogs: BlogType[] =
           image: "",
           desc: ["One of the biggest concerns homeowners face is unexpected budget escalation. Many start with a quoted amount—like ₹5 lakhs—only to be told midway that the cost has risen to ₹9 lakhs. This kind of scope creep is common, especially when quotes are vague, material pricing isn't transparent, or additional work keeps getting added without clarity.", "The solution is to work with teams who prioritize transparency. Look for detailed BOQs, package-based pricing, and clear lists of what's included and what's not. With L'empire Builders' custom design packages, every cost is clearly defined from the beginning, ensuring you know exactly what you are paying for with no hidden surprises."]
         },
-        
+
         {
           title: "Poor Execution & Delays",
           image: "",
@@ -281,37 +281,263 @@ export type PortfoliosType = {
 export const portfolios: PortfoliosType[] = [
   {
     id: 1,
-    title: "MR. RIYAS'S RESIDENCE",
+    title: "MR. VIVEK'S RESIDENCE",
     location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
     images: [
       [
-        "/images/portfolio/mr_riyas_residence/pic_1.1.png",
-        "/images/portfolio/mr_riyas_residence/pic_1.2.png",
-      ],
-      [
-        "/images/portfolio/mr_riyas_residence/pic_2.png",
+        "/images/portfolio/mr_vivek_residence/01.webp",
       ]
     ]
   },
   {
     id: 2,
-    title: "DR. SUMESH'S RESIDENCE",
-    location: "Kottayam, Kerala | Completed in 2025 | Turnkey Residence | 5000 Sq. feet",
+    title: "MR. SUNIL'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
     images: [
       [
-        "/images/portfolio/dr_sumesh_residence/pic_1.png"
+        "/images/portfolio/mr_sunil_residence/01.webp",
       ],
       [
-        "/images/portfolio/dr_sumesh_residence/pic_2.1.png",
-        "/images/portfolio/dr_sumesh_residence/pic_2.2.png"
+        "/images/portfolio/mr_sunil_residence/02.webp",
       ],
       [
-        "/images/portfolio/dr_sumesh_residence/pic_3.png",
-      ]
+        "/images/portfolio/mr_sunil_residence/03.webp",
+      ],
     ]
   },
   {
     id: 3,
+    title: "MR. SARATH'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_sarath_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/mr_sarath_residence/02.webp",
+      ],
+      [
+        "/images/portfolio/mr_sarath_residence/03.webp",
+      ],
+    ]
+  },
+  {
+    id: 4,
+    title: "MR. MATHEW'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_mathew_residence/01.webp",
+      ],
+    ]
+  },
+  {
+    id: 5,
+    title: "MR. MANISH'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_manish_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/mr_manish_residence/02.webp",
+      ]
+    ]
+  },
+  {
+    id: 6,
+    title: "MR. JOE SYLVESTER'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_joe_sylvester_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/mr_joe_sylvester_residence/02.webp",
+      ]
+    ]
+  },
+  {
+    id: 7,
+    title: "MR. JAMES'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_james_residence/01.webp",
+      ]
+    ]
+  },
+  {
+    id: 8,
+    title: "MR. JAIMON'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_jaimon_residence/01.webp",
+      ]
+    ]
+  },
+  {
+    id: 9,
+    title: "MR. DEEPU'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_deepu_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/mr_deepu_residence/02.webp",
+      ],
+      [
+        "/images/portfolio/mr_deepu_residence/03.1.webp",
+        "/images/portfolio/mr_deepu_residence/03.2.webp",
+      ]
+    ]
+  },
+  {
+    id: 10,
+    title: "MR. ANOOP'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_anoop_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/mr_anoop_residence/02.webp",
+      ],
+      [
+        "/images/portfolio/mr_anoop_residence/03.1.webp",
+        "/images/portfolio/mr_anoop_residence/03.2.webp",
+      ]
+    ]
+  },
+  {
+    id: 11,
+    title: "MR. ANIL'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_anil_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/mr_anil_residence/02.webp",
+      ]
+    ]
+  },
+  {
+    id: 12,
+    title: "MR. KIRAN RAJU'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_kiran_raju_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/mr_kiran_raju_residence/02.webp",
+      ],
+      [
+        "/images/portfolio/mr_kiran_raju_residence/03.webp",
+      ],
+      [
+        "/images/portfolio/mr_kiran_raju_residence/04.webp",
+      ],
+    ]
+  },
+  {
+    id: 13,
+    title: "MR. AJIN K GEORGE'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_ajin_k_george_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/mr_ajin_k_george_residence/02.webp",
+      ],
+      [
+        "/images/portfolio/mr_ajin_k_george_residence/03.webp",
+      ],
+      [
+        "/images/portfolio/mr_ajin_k_george_residence/04.webp",
+      ],
+    ]
+  },
+  {
+    id: 14,
+    title: "MR. JAYAPRAKASH'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_jayaprakash_residence/01.webp",
+      ],
+    ]
+  },
+  {
+    id: 15,
+    title: "MR. JAMES'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/james_pakalomattam_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/james_pakalomattam_residence/02.webp",
+      ],
+      [
+        "/images/portfolio/james_pakalomattam_residence/03.webp",
+      ],
+      [
+        "/images/portfolio/james_pakalomattam_residence/04.1.webp",
+        "/images/portfolio/james_pakalomattam_residence/04.2.webp",
+      ]
+    ]
+  },
+  {
+    id: 16,
+    title: "MR. RIYAS'S RESIDENCE",
+    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/mr_riyas_residence/01.webp",
+      ],
+      [
+        "/images/portfolio/mr_riyas_residence/02.webp",
+      ],
+      [
+        "/images/portfolio/mr_riyas_residence/03.1.webp",
+        "/images/portfolio/mr_riyas_residence/03.2.webp",
+      ]
+    ]
+  },
+  {
+    id: 17,
+    title: "DR. SUMESH'S RESIDENCE",
+    location: "Kottayam, Kerala | Completed in 2025 | Turnkey Residence | 5000 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/dr_sumesh_residence/pic_1.webp"
+      ],
+      [
+        "/images/portfolio/dr_sumesh_residence/pic_2.webp",
+      ],
+      [
+        "/images/portfolio/dr_sumesh_residence/pic_3.webp",
+      ],
+      [
+        "/images/portfolio/dr_sumesh_residence/pic_4.webp",
+      ],
+      [
+        "/images/portfolio/dr_sumesh_residence/pic_5.1.webp",
+        "/images/portfolio/dr_sumesh_residence/pic_5.2.webp"
+      ],
+      [
+        "/images/portfolio/dr_sumesh_residence/pic_6.1.webp",
+        "/images/portfolio/dr_sumesh_residence/pic_6.2.webp"
+      ],
+    ]
+  },
+  {
+    id: 18,
     title: "MR. ROSHIN'S RESIDENCE",
     location: "Pala, Kerala | Turnkey Residence | 2500 Sq. feet",
     images: [
@@ -321,17 +547,17 @@ export const portfolios: PortfoliosType[] = [
     ]
   },
   {
-    id: 4,
+    id: 19,
     title: "MR. JEFRIN'S RESIDENCE",
     location: "Ernakulam, Kerala | Turnkey Residence | 2500 Sq. feet",
     images: [
       [
-        "/images/portfolio/mr_jefrins_residence/pic_1.png"
+        "/images/portfolio/mr_jefrins_residence/01.webp"
       ]
     ]
   },
   {
-    id: 5,
+    id: 20,
     title: "MR. MANAIKH LAL'S RESIDENCE",
     location: "Thrissur, Kerala | Turnkey Residence | 2500 Sq. feet",
     images: [
@@ -341,7 +567,7 @@ export const portfolios: PortfoliosType[] = [
     ]
   },
   {
-    id: 6,
+    id: 21,
     title: "MR. ANOOP'S RESIDENCE",
     location: "Manvettom, Kottayam, Kerala | Turnkey Residence | 2500 Sq. feet",
     images: [
@@ -355,23 +581,26 @@ export const portfolios: PortfoliosType[] = [
     ]
   },
   {
-    id: 7,
+    id: 22,
     title: "MR. JACOB'S RESIDENCE",
     location: "Thiruvalla, Kerala | Turnkey Residence | 2500 Sq. feet",
     images: [
       [
-        "/images/portfolio/mr_jacobs_residence/pic_1.png"
+        "/images/portfolio/mr_jacobs_residence/01.webp"
       ],
       [
-        "/images/portfolio/mr_jacobs_residence/pic_2.png"
+        "/images/portfolio/mr_jacobs_residence/02.webp"
       ],
       [
-        "/images/portfolio/mr_jacobs_residence/pic_3.png"
+        "/images/portfolio/mr_jacobs_residence/03.webp"
+      ],
+      [
+        "/images/portfolio/mr_jacobs_residence/04.webp"
       ],
     ]
   },
   {
-    id: 8,
+    id: 23,
     title: "MR. AJIN'S RESIDENCE",
     location: "Kuruppumthara, Kerala | Turnkey Residence | 2500 Sq. feet",
     images: [
@@ -381,7 +610,7 @@ export const portfolios: PortfoliosType[] = [
     ]
   },
   {
-    id: 9,
+    id: 24,
     title: "MR. KIRAN'S RESIDENCE",
     location: "Mavelikkara, Kerala | Turnkey Residence | 2500 Sq. feet",
     images: [
@@ -393,8 +622,17 @@ export const portfolios: PortfoliosType[] = [
       ],
     ]
   },
+  {
+    id: 25,
+    title: "MR. SHIBU GEORGE'S RESIDENCE",
+    location: "Mavelikkara, Kerala | Turnkey Residence | 2500 Sq. feet",
+    images: [
+      [
+        "/images/portfolio/shibu_george_residence/01.webp"
+      ],
+    ]
+  },
 ]
-
 
 
 export const reviews = [
