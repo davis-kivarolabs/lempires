@@ -1,61 +1,73 @@
-import './globals.css';
-import './globals.scss';
-import type { Metadata } from 'next';
-import { siteConfig } from '@/lib/siteConfig';
-import Header from '@/components/Header';
-import SmoothScroll from '@/components/SmoothScroll';
-import { Plus_Jakarta_Sans } from 'next/font/google';
-import localFont from 'next/font/local';
-
+import "./globals.css";
+import "./globals.scss";
+import type { Metadata } from "next";
+import { siteConfig } from "@/lib/siteConfig";
+import Header from "@/components/Header";
+import SmoothScroll from "@/components/SmoothScroll";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 
 const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: '--font-plus-jakarta',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
 });
 
 const brockmann = localFont({
-  src: '../public/fonts/brockmann-medium.otf',
-  variable: '--font-brockmann',
-  weight: '500',
+  src: "../public/fonts/brockmann-medium.otf",
+  variable: "--font-brockmann",
+  weight: "500",
 });
 
-
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
-  },
-  description: siteConfig.description,
-  openGraph: {
-    title: siteConfig.title,
-    description: siteConfig.description,
-    url: siteConfig.url,
-    siteName: siteConfig.title,
-    images: [
-      {
-        url: `${siteConfig.url}/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.title,
-      },
-    ],
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/og-image.jpg`],
-  },
+export const metadata = {
   alternates: {
-    canonical: siteConfig.url,
+    canonical: "https://www.example.com/page-url",
+    languages: {
+      "en-US": "/en-US/page",
+      "hi-IN": "/hi-IN/page",
+    },
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+// export const metadata: Metadata = {
+//   title: {
+//     default: siteConfig.title,
+//     template: `%s | ${siteConfig.title}`,
+//   },
+//   description: siteConfig.description,
+//   openGraph: {
+//     title: siteConfig.title,
+//     description: siteConfig.description,
+//     url: siteConfig.url,
+//     siteName: siteConfig.title,
+//     images: [
+//       {
+//         url: `${siteConfig.url}/og-image.jpg`,
+//         width: 1200,
+//         height: 630,
+//         alt: siteConfig.title,
+//       },
+//     ],
+//     type: 'website',
+//   },
+//   twitter: {
+//     card: 'summary_large_image',
+//     title: siteConfig.title,
+//     description: siteConfig.description,
+//     images: [`${siteConfig.url}/og-image.jpg`],
+//   },
+//   alternates: {
+//     canonical: siteConfig.url,
+//   },
+// };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${brockmann.variable}`} >
+    <html lang="en" className={`${plusJakarta.variable} ${brockmann.variable}`}>
       <body>
         <Header />
         <SmoothScroll>
@@ -65,7 +77,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-
 
 // import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";

@@ -25,23 +25,23 @@ const nextConfig = {
     ];
   },
 
-  // Canonical + multi-language links
-  alternates: {
-    canonical: 'https://www.example.com/page-url',
-    languages: {
-      'en-US': '/en-US/page',
-      'hi-IN': '/hi-IN/page',
-    },
-  },
+  // // Canonical + multi-language links
+  // alternates: {
+  //   canonical: 'https://www.example.com/page-url',
+  //   languages: {
+  //     'en-US': '/en-US/page',
+  //     'hi-IN': '/hi-IN/page',
+  //   },
+  // },
 
-  // SCSS setup (keeps your structure clean)
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'app/styles')],
-    additionalData: `
-      @use 'variables' as *;
-      @use 'mixins' as *;
-    `,
-  },
+  // // SCSS setup (keeps your structure clean)
+  // sassOptions: {
+  //   includePaths: [path.join(__dirname, 'app/styles')],
+  //   additionalData: `
+  //     @use 'variables' as *;
+  //     @use 'mixins' as *;
+  //   `,
+  // },
 };
 
 module.exports = nextConfig;

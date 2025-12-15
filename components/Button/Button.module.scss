@@ -12,6 +12,7 @@
 //   }
 // }
 
+@use "../../app/styles/variables" as *;
 @use "sass:color";
 
 .button {
@@ -45,7 +46,6 @@
   }
 }
 
-
 .primary_button {
   background-color: white;
   height: fit-content;
@@ -62,7 +62,7 @@
   color: #00000080;
   cursor: pointer;
 
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   .transparent {
     background-color: transparent;

@@ -1,167 +1,166 @@
-.about_page {
 
-    .our_ethos_section {
-        padding-top: 200px;
-        display: flex;
-        align-items: start;
+.about_page {
+  .our_ethos_section {
+    padding-top: 200px;
+    display: flex;
+    align-items: start;
+
+    @media (max-width: 1080px) {
+      flex-direction: column;
+      gap: 32px;
+      padding-top: 100px;
+    }
+
+    .title_wrapper {
+      display: flex;
+      align-items: start;
+      gap: 34px;
+      width: 100%;
+
+      @media (max-width: 1080px) {
+        flex-direction: column;
+      }
+    }
+
+    .content {
+      width: 100%;
+
+      display: grid;
+      gap: 39px;
+
+      .our_ethos_image {
+        width: 100%;
+      }
+    }
+  }
+
+  .founders_note_section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .breadcrumbs_wrapper_mob {
+      display: none;
+
+      @media (max-width: 1080px) {
+        display: block;
+        margin-bottom: 50px;
+      }
+    }
+
+    .founders_list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      position: relative;
+
+      .breadcrumbs_wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
 
         @media (max-width: 1080px) {
-            flex-direction: column;
-            gap: 32px;
-            padding-top: 100px;
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .founder_note {
+        width: calc(50% - 30px);
+
+        @media (max-width: 768px) {
+          width: 100%;
         }
 
-        .title_wrapper {
-            display: flex;
-            align-items: start;
-            gap: 34px;
-            width: 100%;
-
-            @media (max-width: 1080px) {
-                flex-direction: column;
-            }
-        }
-
-        .content {
-            width: 100%;
-
-            display: grid;
-            gap: 39px;
-
-            .our_ethos_image {
-                width: 100%;
-            }
-        }
-    }
-
-    .founders_note_section {
-        padding-top: 100px;
-        padding-bottom: 100px;
-
-        .breadcrumbs_wrapper_mob {
-            display: none;
-
-            @media (max-width: 1080px) {
-                display: block;
-                margin-bottom: 50px;
-            }
-        }
-
-        .founders_list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            position: relative;
-
-            .breadcrumbs_wrapper {
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                @media (max-width: 1080px) {
-                    display: none;
-                }
-            }
-
-            @media (max-width: 768px) {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .founder_note {
-                width: calc(50% - 30px);
-
-                @media (max-width: 768px) {
-                    width: 100%;
-                }
-
-                display: flex;
-                flex-direction: column;
-                gap: 42px;
-
-                .founder_details {
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center;
-
-                    .name {
-                        // font-family: Brockmann;
-                        font-family: var(--font-heading), sans-serif;
-                        font-weight: 500;
-                        font-size: 24px;
-                        line-height: 100%;
-                        letter-spacing: 0%;
-                        margin-top: 19px;
-                    }
-
-                    .position {
-                        margin-top: 4px;
-                        // font-family: Brockmann;
-                        font-family: var(--font-heading), sans-serif;
-                        font-weight: 500;
-                        font-size: 16px;
-                        line-height: 100%;
-                        letter-spacing: 0%;
-                    }
-                }
-
-                &:nth-child(2) {
-                    align-items: end;
-                    text-align: end;
-
-
-                    @media (max-width: 768px) {
-                        align-items: center;
-                        text-align: start;
-                    }
-                }
-
-                &:nth-child(3) {
-                    align-items: start;
-                    text-align: start;
-
-                    @media (max-width: 768px) {
-                        align-items: center;
-                        text-align: start;
-                    }
-                }
-
-                .desc {
-                    width: 80%;
-
-                    @media (max-width: 1440px) {
-                        width: 90%;
-                    }
-
-                    @media (max-width: 768px) {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-
-    .exhibitions_section {
         display: flex;
         flex-direction: column;
-        gap: 54px;
+        gap: 42px;
 
-        padding-top: 100px;
-        padding-bottom: 100px;
+        .founder_details {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
 
-        @media (max-width: 1080px) {
-            gap: 22px;
+          .name {
+            // font-family: Brockmann;
+            font-family: var(--font-heading), sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            margin-top: 19px;
+          }
+
+          .position {
+            margin-top: 4px;
+            // font-family: Brockmann;
+            font-family: var(--font-heading), sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+          }
         }
 
-        .text {
-            p {
-                // font-family: Brockmann;
-                font-weight: 500;
-                font-size: clamp(14px, 4vw, 32px);
-                line-height: 130%;
-                letter-spacing: -3%;
-                text-align: center;
-            }
+        &:nth-child(2) {
+          align-items: end;
+          text-align: end;
+
+          @media (max-width: 768px) {
+            align-items: center;
+            text-align: start;
+          }
         }
+
+        &:nth-child(3) {
+          align-items: start;
+          text-align: start;
+
+          @media (max-width: 768px) {
+            align-items: center;
+            text-align: start;
+          }
+        }
+
+        .desc {
+          width: 80%;
+
+          @media (max-width: 1440px) {
+            width: 90%;
+          }
+
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
+      }
     }
+  }
+
+  .exhibitions_section {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media (max-width: 1080px) {
+      gap: 22px;
+    }
+
+    .text {
+      p {
+        // font-family: Brockmann;
+        font-weight: 500;
+        font-size: clamp(14px, 4vw, 32px);
+        line-height: 130%;
+        letter-spacing: -3%;
+        text-align: center;
+      }
+    }
+  }
 }
