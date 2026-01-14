@@ -11,112 +11,98 @@ interface BlogPageProps {
     };
 }
 
-export async function generateMetadata({ params }: { params: any }) {
-    const post = await getPost(params.slug);
-    console.log("ddd", post)
 
-    return {
-        title: post?.title,
-        description: post?.contents[0]?.desc[0],
-    };
+interface BlogPageProps {
+  params: Promise<{
+    slug: string;
+  }>;
 }
 
-const Page = ({ params }: BlogPageProps) => {
-    const blog = blogs.find((item) => item.slug === params.slug);
 
-    return (
-        <>
-            <div className='blog_detail_page padding_section'>
-                <BreadCrumbs title='BLOG ' />
 
-                <div className='blog_wrapper'>
-                    <div className='detailed_blog_title'>
-                        <div style={{ width: "40%" }} >
-                            <SectionTitle title_1={blog?.title || ""} />
-                        </div>
-                        <DescTexts color='#878C91' desc={blog?.created_by || ""} />
-                        {/* <SectionTitle title_1='Behind the Build:' title_2='What Makes a Home Truly Last?' /> */}
-                        {/* <DescTexts color='#878C91' desc='by lempire builders | Oct 13, 2025 | Blog, English' /> */}
-                    </div>
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
-                    <BlogContent blog={blog} />
-                </div>
+  const post = await getPost(slug);
+
+  console.log("ddd", post);
+
+  return {
+    title: post?.title ?? "Blog",
+    description: post?.contents?.[0]?.desc?.[0] ?? "",
+  };
+}
+
+
+const Page = async ({ params }: BlogPageProps) => {
+  const { slug } = await params;
+
+  console.log("params", slug);
+
+  const blog = blogs.find((item) => item.slug === slug);
+
+  return (
+    <>
+      <div className="blog_detail_page padding_section">
+        <BreadCrumbs title="BLOG" />
+
+        <div className="blog_wrapper">
+          <div className="detailed_blog_title">
+            <div style={{ width: "40%" }}>
+              <SectionTitle title_1={blog?.title || ""} />
             </div>
-            <Footer />
-        </>
-    )
-}
 
-export default Page
+            <DescTexts color="#878C91" desc={blog?.created_by || ""} />
+          </div>
+
+          <BlogContent blog={blog} />
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
+};
+
+export default Page;
 
 
-// import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs'
-// import { DescTexts, SectionTitle } from '@/components/Texts/Texts'
-// import React from 'react'
-// import "../blogs.scss"
-// import Image from 'next/image'
-// import { blogs } from '@/lib/cms'
+// export async function generateMetadata({ params }: { params: any }) {
+//     const post = await getPost(params.slug);
+//     console.log("ddd", post)
 
+//     return {
+//         title: post?.title,
+//         description: post?.contents[0]?.desc[0],
+//     };
+// }
 
+// const Page = ({ params }: BlogPageProps) => {
+//     const blog = blogs.find((item) => item.slug === params.slug);
 
-// const page = () => {
 //     return (
-//         <div className='blog_detail_page padding_section' >
-//             <BreadCrumbs title='BLOG ' />
+//         <>
+//             <div className='blog_detail_page padding_section'>
+//                 <BreadCrumbs title='BLOG ' />
 
-//             <div className='blog_wrapper' >
-//                 <div className='grid gap-[10px] detailed_blog_title' >
-//                     <SectionTitle title_1='Behind the Build:' title_2='What Makes a Home Truly Last?' />
-//                     <DescTexts color='#878C91' desc='by lempire builders | Oct 13, 2025 | Blog, English' />
-//                 </div>
-
-//                 <div className='detail_blog' >
-//                     <div className='sub_titles' >
-//                         {
-//                             blogs[0].contents.map((item, i) => <div className='sub_title' >
-//                                 <div className='count' >
-//                                     <p>{i + 1}</p>
-//                                 </div>
-//                                 <p className='sub_title_text' >{item.title}</p>
-//                             </div>)
-//                         }
+//                 <div className='blog_wrapper'>
+//                     <div className='detailed_blog_title'>
+//                         <div style={{ width: "40%" }} >
+//                             <SectionTitle title_1={blog?.title || ""} />
+//                         </div>
+//                         <DescTexts color='#878C91' desc={blog?.created_by || ""} />
 //                     </div>
 
-//                     <div className='detail_blog_content' >
-//                         <Image
-//                             className='details_blog_image'
-//                             alt='blog'
-//                             src={"/images/portfolio/MR. RIYAS RESIDENCE_1.jpg"}
-//                             width={614}
-//                             height={384}
-//                         />
-//                         <div className='detailed_blog_title_mob' >
-//                             <SectionTitle title_1='Behind the Build:' title_2='What Makes a Home Truly Last?' />
-//                             <DescTexts color='#878C91' desc='by lempire builders | Oct 13, 2025 | Blog, English' />
-//                         </div>
-
-//                         <div className='blog_description' >
-//                             {
-//                                 blogs[0].contents.map((item, i) => {
-//                                     return (
-
-//                                         <div>
-//                                             <h2>{item.title}</h2>
-//                                             <div className='grid gap-[15px]' >
-//                                                 {
-//                                                     item?.desc?.map((desc) => <DescTexts color='#878C91' desc={desc || ""} />)
-//                                                 }
-//                                             </div>
-//                                         </div>
-//                                     )
-//                                 })
-//                             }
-//                         </div>
-//                     </div>
+//                     <BlogContent blog={blog} />
 //                 </div>
 //             </div>
-//         </div>
+//             <Footer />
+//         </>
 //     )
 // }
 
-// export default page
+// export default Page;

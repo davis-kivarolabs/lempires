@@ -2,7 +2,7 @@
 
 import "./Achievements.scss"
 const Achievements = ({ bg_color, font_color }: { bg_color?: string; font_color?: string; }) => {
-    const homeDelivered: any = useCountUp(250);
+    const homeDelivered: any = useCountUp(2500);
     const yearsIndustry: any = useCountUp(5);
     const nriClients: any = useCountUp(50);
 

@@ -1,13 +1,16 @@
 'use client'
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+    const pathname = usePathname();
+
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // prevent body scroll when menu open
+
     useEffect(() => {
         if (typeof window === "undefined") return;
         document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -18,6 +21,10 @@ const Header = () => {
 
     const closeMenu = () => setMenuOpen(false);
     const toggleMenu = () => setMenuOpen((s) => !s);
+
+
+      const isActive = (path: string) =>
+    pathname === path ? "navlink active" : "navlink";
 
     return (
         <header className="header">
@@ -34,13 +41,23 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="navlinks">
-                <Link href="/" className="navlink">Home</Link>
+                <Link href="/" className={isActive("/")}>Home</Link>
+                <Link href="/about" className={isActive("/about")}>About</Link>
+                <Link href="/portfolio" className={isActive("/portfolio")}>Portfolio</Link>
+                <Link href="/gallery" className={isActive("/gallery")}>Interior</Link>
+                <Link href="/faq" className={isActive("/faq")}>FAQ</Link>
+                <Link href="/blog" className={isActive("/blog")}>Blog</Link>
+                <Link href="/careers" className={isActive("/careers")}>Careers</Link>
+                <Link href="/contact" className={isActive("/contact")}>Contact</Link>
+
+            {/* <Link href="/" className="navlink active">Home</Link>
                 <Link href="/about" className="navlink">About</Link>
                 <Link href="/portfolio" className="navlink">Portfolio</Link>
+                <Link href="/gallery" className="navlink">Gallery</Link>
                 <Link href="/faq" className="navlink">FAQ</Link>
                 <Link href="/blog" className="navlink">Blog</Link>
                 <Link href="/careers" className="navlink">Careers</Link>
-                <Link href="/contact" className="navlink">Contact</Link>
+                <Link href="/contact" className="navlink">Contact</Link> */}
             </nav>
 
             <div className="menu_icon" onClick={toggleMenu} aria-label="Open menu" role="button">
@@ -63,6 +80,7 @@ const Header = () => {
                         <li onClick={closeMenu}><Link href="/">Home</Link></li>
                         <li onClick={closeMenu}><Link href="/about">About</Link></li>
                         <li onClick={closeMenu}><Link href="/portfolio">Portfolio</Link></li>
+                        <li onClick={closeMenu}><Link href="/gallery">Interior</Link></li>
                         <li onClick={closeMenu}><Link href="/faq">FAQ</Link></li>
                         <li onClick={closeMenu}><Link href="/blog">Blog</Link></li>
                         <li onClick={closeMenu}><Link href="/careers">Careers</Link></li>

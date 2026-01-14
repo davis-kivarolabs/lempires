@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image';
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import "./PropertyCarousel.scss"
 import { portfolios, PortfoliosType } from '@/lib/cms';
 import { useRouter } from 'next/navigation';
@@ -10,7 +10,7 @@ import Button from '../Button/Button';
 
 const PropertyCarousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
+    // const [isPaused, setIsPaused] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(false);
 
     const nextSlide = useCallback(() => {
@@ -27,16 +27,16 @@ const PropertyCarousel = () => {
         setTimeout(() => setIsTransitioning(false), 600);
     }, [portfolios.length, isTransitioning]);
 
-    // Auto-play functionality
-    useEffect(() => {
-        if (isPaused) return;
+    // // Auto-play functionality
+    // useEffect(() => {
+    //     if (isPaused) return;
 
-        const interval = setInterval(() => {
-            nextSlide();
-        }, 10000);
+    //     const interval = setInterval(() => {
+    //         nextSlide();
+    //     }, 10000);
 
-        return () => clearInterval(interval);
-    }, [isPaused, nextSlide]);
+    //     return () => clearInterval(interval);
+    // }, [isPaused, nextSlide]);
 
     const currentSlideData = portfolios[currentSlide];
 
@@ -48,8 +48,8 @@ const PropertyCarousel = () => {
     return (
         <div
             className='property_carousel'
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
+            // onMouseEnter={() => setIsPaused(true)}
+            // onMouseLeave={() => setIsPaused(false)}
         >
             <div className='carousel_track'>
                 {portfolios.map((slide, index) => {
@@ -59,7 +59,7 @@ const PropertyCarousel = () => {
                             key={slide.id}
                             className={`property_images ${index === currentSlide ? 'active' : ''} ${index < currentSlide ? 'prev' : 'next'}`}
                         >
-                            {slide.images[0].map((image, imgIndex) => (
+                            {slide?.images[0]?.map((image, imgIndex) => (
                                 <div key={imgIndex} className='property_image_wrapper'>
                                     <Image
                                         onClick={handleRedirect}
@@ -146,16 +146,16 @@ export const PropertyCarouselPerson = ({ item }: { item: PortfoliosType }) => {
         setTimeout(() => setIsTransitioning(false), 600);
     }, [item.images.length, isTransitioning]);
 
-    // Auto-play functionality
-    useEffect(() => {
-        if (isPaused) return;
+    // // Auto-play functionality
+    // useEffect(() => {
+    //     if (isPaused) return;
 
-        const interval = setInterval(() => {
-            nextSlide();
-        }, 100000);
+    //     const interval = setInterval(() => {
+    //         nextSlide();
+    //     }, 100000);
 
-        return () => clearInterval(interval);
-    }, [isPaused, nextSlide]);
+    //     return () => clearInterval(interval);
+    // }, [isPaused, nextSlide]);
 
     // const currentSlideData = item.images[currentSlide];
 

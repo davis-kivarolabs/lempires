@@ -5,6 +5,18 @@ export const faqs = [
     title: "Process & Timeline",
     accordian: [
       {
+        title: "How do you manage timelines and delays?",
+        desc: [
+          "Projects are executed using structured schedules and milestone-based planning. Regular monitoring, advance coordination of materials, and on-site supervision help minimise delays. Any unavoidable changes are communicated clearly.",
+        ],
+      },
+      {
+        title: "Will the same team handle design and execution?",
+        desc: [
+          "Yes. The same team coordinates both design and execution, ensuring alignment between planning and on-site implementation and reducing errors caused by handovers.",
+        ],
+      },
+      {
         title: "What defines your design approach?",
         desc: [
           "We create spatial harmony through Vaastu-compliant layouts blended with contemporary aesthetics. Each design emerges from deep client collaboration, ensuring spaces reflect personal narratives while maintaining architectural integrity.",
@@ -40,6 +52,18 @@ export const faqs = [
           "Absolutely. Our 'Home Renewal' service specializes in transforming existing spaces while respecting their original character. We enhance flow, update aesthetics, and optimize functionality.",
         ],
       },
+      {
+        title: "How do you manage material selection and finishes?",
+        desc: [
+          "Material selection is guided by durability, performance, budget, and maintenance requirements. Options are clearly presented, and final selections are confirmed before execution to avoid last-minute changes.",
+        ],
+      },
+      {
+        title: "How do you ensure designs are practical for construction?",
+        desc: [
+          "Designs are developed with execution in mind. All drawings are reviewed for structural feasibility, site conditions, and constructability before work begins, ensuring smooth on-site implementation",
+        ],
+      },
     ],
   },
   {
@@ -63,6 +87,7 @@ export type BlogType = {
   slug: string;
   title: string;
   image: string;
+  desc?: string[];
   created_by: string;
   contents: {
     title: string;
@@ -72,6 +97,102 @@ export type BlogType = {
 };
 
 export const blogs: BlogType[] = [
+  {
+    slug: "nri-s-guide-to-building-a-home-in-kerala-without-being-on-site",
+    title: "NRI’s Guide to Building a Home in Kerala Without Being on Site",
+    image: "/images/blogs/behind_the_build.png",
+    desc: [
+      "For many Non-Resident Indians (NRIs), NRI home construction in Kerala is more than just a project — it’s a dream. Some plan for retirement, others see it as an investment, and many simply want a family home where memories can be made.But there’s one big challenge: most of this has to be managed while living abroad. The idea of building a house without being on site can feel stressful. The good news? With the right builder and modern tools, it is not only possible but also smooth and rewarding.",
+    ],
+    created_by: "by L'empire builders | Oct 13, 2025 | Blog, English",
+    contents: [
+      {
+        title: "Step 1: Find the Right Builder",
+        image: "",
+        desc: [
+          "When you live far away, your builder becomes your eyes and ears. A reliable builder will:",
+          "- Handle all approvals and permissions",
+          "- Coordinate every stage of construction",
+          "- Keep you updated without you needing to travel often",
+          "Choosing the right partner means you don’t have to deal with multiple contractors or spend sleepless nights worrying about progress.",
+        ],
+      },
+      {
+        title: "step 2: Understand the Cost of NRI Home Construction in Kerala",
+        image: "",
+        desc: [
+          "One of the most common NRI questions is: How much does it cost to build a house in Kerala?",
+          "The answer depends on:",
+          "- Location (city or rural area)",
+          "- Size of the home (square feet)",
+          "- Materials and finishes (basic vs. luxury)",
+          "A simple home with basic finishes will cost less, while a house with luxury fittings, custom interiors, and a modular kitchen will naturally cost more.Always ask your builder for a clear, detailed estimate. A proper breakdown helps you plan your budget without surprises.",
+        ],
+      },
+      {
+        title: "Step 3: Use Modern Design Tools",
+        image: "",
+        desc: [
+          "Since you’re away, design clarity becomes very important. Today’s tools make this easier than ever:",
+          "- 2D floor plans to understand Layouts",
+          "- 3D visualizations to see your home before construction begins",
+          "- Virtual walkthroughs that let you explore the house online, room by room.",
+          "These tools save you from last-minute changes and give peace of mind that your ideas are correctly understood.",
+        ],
+      },
+      {
+        title: "Step 4: Plan Interiors Early",
+        image: "",
+        desc: [
+          "Interiors should not be an afterthought. Finalizing them while construction is ongoing saves both time and money.Popular choices in Kerala include:",
+          "- Traditional woodwork for a warm, homely feel.",
+          "- Modern minimalist interiors for easy maintenance.",
+          "- Modular kitchens, custom wardrobes, and smart storage solutions.",
+        ],
+      },
+      {
+        title: "Step 5: Choose Turnkey Construction",
+        image: "",
+        desc: [
+          "For NRIs, the turnkey model is the most stress-free option. Here, the builder takes care of everything — from design and permissions to interiors and final handover.npm That means you only deal with one company, and at the end, you get a ready-to-live home without chasing multiple teams.",
+        ],
+      },
+      {
+        title: "Step 6: Stay Connected with Technology",
+        image: "",
+        desc: [
+          "Distance is no longer a barrier. Builders now use digital tools to keep NRIs updated:",
+          "- Weekly site photos, videos, or even drone footage",
+          "- Online meetings to finalize materials, colors, and finishes.",
+          "- Digital payment milestones for easy transactions.",
+          "This way, you stay involved in every decision without being physically present.",
+        ],
+      },
+      {
+        title: "Step 7: Think Long-Term",
+        image: "",
+        desc: [
+          "Even if your new home won’t be occupied immediately, it will still need care. Many builders now offer:",
+          "- Home maintenance services",
+          "- Renovation and upgrade support",
+          "Having the same team manage future updates makes things simple and stress-free.",
+        ],
+      },
+      {
+        title: "How Lempire Builders Helps NRIs",
+        image: "",
+        desc: [
+          "At Lempire Builders,we specialize in helping NRIs build homes in Kerala without the hassle of being on site. Over the years, we’ve managed end-to-end projects — from planning and approvals to interiors and final handover.",
+          "- Transparent cost estimates",
+          "- Modern design tools (3D, walkthroughs)",
+          "- Regular updates and progress reports",
+          "Interior designs that balance Kerala tradition with modern living",
+          "Building a home in Kerala while living abroad doesn’t have to be complicated. With the right builder, clear planning, and proper updates, your dream can become a reality no matter where in the world you are.",
+          "If you’re an NRI looking to build your dream home in Kerala, Lempire Builders is here to guide you every step of the way. Contact us today for a free consultation and let’s start creating your home together.",
+        ],
+      },
+    ],
+  },
   {
     slug: "behind-the-build-what-makes-a-home-truly-last",
     title: "Behind the Build: What Makes a Home Truly Last?",
@@ -184,6 +305,160 @@ export const blogs: BlogType[] = [
     ],
   },
   {
+    slug: "checklist before you start building your home in kerala",
+    title: "Checklist Before You Start Building Your Home in Kerala",
+    image: "/images/blogs/best_time_to_build.png",
+    created_by: "by lempire builders |  Sep 18, 2025 | Blog, English",
+    contents: [
+      {
+        title: "",
+        image: "",
+        desc: [
+          "Building a house in Kerala Planning to build your home in Kerala is a dream for many is a dream for many. Maybe you’ve worked abroad and now want to settle back in your hometown. Or you’re building your very first home for your growing family. Either way, this journey is deeply personal and every step matters.",
+          "Before a single foundation stone is laid, there are crucial decisions that can make or break your experience. This guide walks you through those decisions with clear, actionable advice — all based on real experiences of building your home in Kerala.",
+        ],
+      },
+      {
+        title: "Budget Planning Before Building Your Home in Kerala",
+        image: "",
+        desc: [
+          "One of the biggest mistakes many families make is underestimating how much they’ll actually need to complete their home. A well thought out budget saves you from mid project stress and surprises.",
+          "Here’s what you should factor in:",
+          "- The cost of buying the land and getting it registered",
+          "- Construction materials and skilled labour",
+          "- Architectural drawings and design consultations",
+          "- Interior work  like the kitchen, wardrobes, ceiling design",
+          "- Government approvals, taxes, and utility connections",
+          "A quick tip: Always set aside an additional 10–15% for unexpected costs. Material prices fluctuate, and small design changes can quickly add up.",
+
+          "When planning your finances:",
+
+          "- Compare different home loan options",
+          "- Understand EMI commitments and loan eligibility",
+          "- Get a clear project estimate from your builder with a breakdown of all costs",
+          "Working with a builder who offers turnkey solutions, like L’empire, often makes budgeting much easier. You’ll get one point of contact and fewer surprises along the way.",
+        ],
+      },
+      {
+        title: "Choose the Right Plot of Land",
+        image: "",
+        desc: [
+          "Choosing the right location is very important. You might find a cheap plot, but if the land has issues, your construction costs could double.",
+
+          "Before you commit to buying land, look into:",
+
+          "- Soil strength: Weak soil will need stronger foundations",
+          "- Water levels: High water tables can create dampness or flooding problems",
+          "- Access roads and drainage: Are they wide enough? Is waterlogging an issue?",
+          "- Sunlight and wind direction: These affect ventilation, lighting, and energy use",
+          "- Legal clarity: Always verify title deeds, encumbrance status, and tax records",
+          "If you’re unsure, it’s wise to ask your builder to do a basic site inspection. L’empire, for instance, provides land assessment support so you know what you’re getting into.",
+        ],
+      },
+      {
+        title: "2D & 3D Design Planning for Home Construction in Kerala",
+        image: "",
+        desc: [
+          "A strong design is not just about how your house looks, it’s how it lives.Lack of detailed planning can lead to costly mistakes and regrets later. Early 2D and 3D design planning is essential when building your home in Kerala, especially if you’re coordinating remotely.Start with 2D plans to set room sizes and flow. Then move on to 3D elevation views that help your family visualize the look and feel.Want to see how your kitchen tiles match the wall paint? Or how natural light enters the living room? That’s where 3D visualizations help.",
+
+          "Designing early gives you:",
+
+          "- Faster municipal approvals",
+          "- Better clarity when discussing changes",
+          "- A unified vision for the entire family",
+          "If you’re working with a design first builder, you can explore layouts, lighting styles, and even furniture placement before a single wall is built.",
+        ],
+      },
+      {
+        title: "Define What Your Family Really Needs",
+        image: "",
+        desc: [
+          "Every home should reflect the people who live in it. Instead of copying trends, focus on what works for your lifestyle.",
+
+          "Start by asking these questions:",
+
+          "- How many bedrooms do you really need  now and in the future?",
+          "- Do you require an office or a study area for remote work?",
+          "- Would your parents benefit from a bedroom on the ground floor?",
+          "- Is a pooja room, balcony, or library a must-have?",
+          "Create a list of must-haves and nice-to-haves. This clarity helps your designer avoid unnecessary expenses and makes sure every corner of your home has a purpose.",
+        ],
+      },
+      {
+        title: "Find the Right Builder in Kerala",
+        image: "",
+        desc: [
+          "Your builder can be your most valuable ally or your most significant risk.",
+
+          "Look for these qualities in a trusted construction partner:",
+
+          "- A strong local portfolio (visit ongoing projects if possible)",
+          "- End-to-end services (design, build, interiors)",
+          "- Strong team of engineers, architects & site supervisors",
+          "- Timely completion guarantee with clear project timelines",
+          "Looking for a trusted construction partner in Kerala? Book a discovery call with L’empire Builders.",
+        ],
+      },
+      {
+        title: "Get All the Legal Approvals in Place",
+        image: "",
+        desc: [
+          "Many families make the mistake of starting construction before getting all approvals, which can result in stop work notices or fines.",
+
+          "What you’ll need:",
+
+          "- Panchayat or municipality building permit",
+          "- Property tax receipt and title deed",
+          "- Electricity and water connections",
+          "- Environmental approvals if near wetlands or forest zones",
+          "Good builders will handle this entire process for you. At L’empire, we manage all legal steps so you’re not caught in red tape.",
+        ],
+      },
+      {
+        title: "Don’t Wait to Plan Interiors",
+        image: "",
+        desc: [
+          "Interior planning shouldn’t come last — it should go hand in hand with your construction, especially when building your home in Kerala. Plumbing, electricals, and cabinet design must align from day one",
+          "Here’s why early planning helps:",
+
+          "- Switchboards and light points align with furniture layout",
+          "- Kitchen counters and plumbing match your cabinet design",
+          "- Wardrobes fit perfectly without last-minute resizing",
+          "If you’re aiming for a well-finished home from Day 1, speak to an interior consultant early. L’empire offers interior support from the design phase itself, ensuring smooth execution.",
+        ],
+      },
+      {
+        title: "Set a Timeline and Stick to It",
+        image: "",
+        desc: [
+          "One of the main reasons home projects go off track is poor communication. Define a project calendar right at the start.Break the project into key phases: foundation, walls, roofing, interiors and have weekly updates. A simple WhatsApp group for sharing site photos and updates works wonders.Consistent follow-ups are crucial for quality checks, faster approvals, and reducing back and forth.",
+        ],
+      },
+      {
+        title: "Conclusion: Ready to Build Your Home in Kerala?",
+        image: "",
+        desc: [
+          "There’s no shortcut to building a home you’ll love  but there’s a clear path. With proper planning, the right team, and a realistic approach, your dream home in Kerala can become a beautiful reality.",
+          "If you’re ready to take the first step, L’empire Builders is here to support you from start to finish land, design, permits, construction, and interiors.Contact us today for a free consultation and take the first confident step towards building your dream home in Kerala.",
+        ],
+      },
+      {
+        title: "Frequently Asked Questions",
+        image: "",
+        desc: [
+          "Q1: How long does it take to build a house in Kerala?",
+          "Typically, around 6–12 months, depending on house size, approvals, and weather.",
+          "Q2: Can I build a home remotely from abroad?",
+          "Yes. L’empire offers full NRI support, with regular updates, video calls, and digital documentation.",
+          "Q3: What is the average cost to build a house",
+          "Costs vary by location and materials used.",
+          "Q4: Does L’empire offer interior work as part of turnkey projects?",
+          "Yes, we include interior design and execution from planning to finishing in our turnkey offerings.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "interior-design-struggles-clients-face-in-kerala",
     title: "Interior Design Struggles Clients Face in Kerala",
     image: "/images/blogs/interior_design_struggles.jpg",
@@ -246,17 +521,6 @@ export const blogs: BlogType[] = [
           "Your dream deserves a process rooted in clarity and care. With thoughtful planning, transparent communication, and a team committed to execution, you can build a home that feels personal, functional, and truly yours.",
         ],
       },
-      {
-        title: "Conclusion: Don't Let Frustration Ruin Your Dream Home",
-        image: "",
-        desc: [
-          `
-            <li>
-            <ul>skdfjasdklf dfkjasdkl;fa</ul>
-            </li>
-            `,
-        ],
-      },
     ],
   },
   {
@@ -297,6 +561,175 @@ export const blogs: BlogType[] = [
           "Smart seasonal planning delivers clear advantages: faster project completion, reduced material wastage, better cement curing and structural integrity, controlled budgets with fewer delays, and smoother, stress-free progress from start to finish.",
         ],
       },
+      {
+        title: "Plan Smart with Kerala's Climate for Better Home Construction",
+        image: "",
+        desc: [
+          "If you want uninterrupted progress and quality results, the best time to start is late January or early February, just before summer. This gives your project a solid head start with enough dry months to complete major construction stages before the rains.At L’empire Builders, we help you schedule projects with detailed seasonal planning to reduce weather-related risks.",
+          "Benefits of Smart Seasonal Planning",
+
+          "Seasonal scheduling brings many benefits:",
+
+          "- Faster Project Timelines",
+          "- Reduced Material Waste & Water Damage",
+          "- Better Cement Curing and Structural Strength",
+          "- Less Downtime = Budget Control",
+          "-Peace of Mind with Predictable Progress",
+        ],
+      },
+      {
+        title: "How L’empire Builders Makes It Easy",
+        image: "",
+        desc: [
+          "We don’t just build- we plan, schedule, and deliver. Here’s how we manage seasonal challenges:",
+
+          "- End-to-end planning based on local climate insights",
+          "- Use of premium materials suited for Kerala’s humid and coastal conditions",
+          "- Expert in-house teams for construction and interior",
+          "- On-time project delivery — even with unpredictable weather",
+        ],
+      },
+      {
+        title: "Services Offered by L’empire Builders",
+        image: "",
+        desc: [
+          "We are more than just builders — we’re your home construction and design partner.",
+
+          "- Residential construction",
+          "- Premium interior design",
+          "- Renovation & remodeling",
+          "- 2D & 3D architectural and interior designs",
+          "- Turnkey project execution",
+        ],
+      },
+      {
+        title: "Final Thoughts: Let’s Build Smart, Build Better",
+        image: "",
+        desc: [
+          "Building your dream home in Kerala doesn’t have to be a challenge — with the right timing and the right team, your project can be smooth and successful. Understanding the best season to build a house is the first step.",
+          "L’empire Builders is here to guide you every step of the way — from climate-based planning to handing over a beautifully finished home.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "turnkey-vs-traditional-construction:-what’s the-difference?",
+    title: "Turnkey vs Traditional Construction: What’s the Difference?",
+    image: "/images/blogs/behind_the_build.png",
+    desc: [
+      "Owning a home is one of the biggest dreams for any family. But when it’s time to begin, many people face a key question:Should you choose turnkey construction or traditional construction?",
+      "Both methods can help you build your dream home — but the process, cost, and experience are very different.At Lempire Builders, one of the most trusted home builders in Kerala, we help clients choose the right approach based on their needs, budget, and lifestyle.",
+      "Let’s explore both methods and understand how they differ.",
+    ],
+    created_by: "by lempire builders | Oct 23, 2025 | Blog, English, Interior",
+    contents: [
+      {
+        title: "What Is Turnkey Construction?",
+        image: "",
+        desc: [
+          "The term “turnkey” means that the builder takes care of everything — from design to handover — and gives you a fully finished, ready-to-move-in home.You simply share your requirements, style preferences, and budget. The builder then handles:",
+
+          "- Architectural design (2D & 3D)",
+          "- Approvals and permits",
+          "- Construction, plumbing, and electrical work",
+          "- Interior design and modular kitchen installation",
+          "- Final cleaning and quality checks",
+          "When the project is complete, you just turn the key and move in — hence the name turnkey construction.It’s a stress-free and fully managed experience.",
+
+          "Example",
+          "Suppose you want to build a modern 3BHK villa in Kerala.You contact Lempire Builders, share your vision, and our team takes care of everything from start to finish. You receive a beautiful, completed home — ready to welcome your family.",
+        ],
+      },
+      {
+        title: "What Is Traditional Construction?",
+        image: "",
+        desc: [
+          "In traditional construction, you take the lead as the project manager.You hire separate professionals for each part of the process — an architect for design, a contractor for construction, and different workers for plumbing, painting, electrical, and interior work.You are responsible for coordinating between them, tracking costs, and managing timelines.",
+
+          "Example",
+          "If you plan to build a home in Kottayam, you might:",
+
+          "Hire an architect for design",
+          "Find a contractor for construction",
+          "Buy materials yourself",
+          "Hire interior designers later",
+          "This gives you more control, but also more work, more time, and more stress — especially if you’re not familiar with construction.",
+        ],
+      },
+      {
+        title: "Pros and Cons of Turnkey Construction",
+        image: "",
+        desc: [
+          "✅ Advantages",
+          "- Hassle-free process: One trusted company handles everything.",
+          "- Faster completion: No delays between multiple contractors.",
+          "- Fixed budget: The total cost is agreed upon before starting.",
+          "- Single point of contact: You only deal with one responsible builder.",
+          "- Ready to move in: The home is delivered fully finished",
+
+          "❌ Disadvantages",
+          "- Less flexibility: Once the design and budget are fixed, major changes are harder.",
+          "- Builder-dependent quality: The outcome depends on the builder’s skill and reliability.",
+          "👉 That’s why choosing a trusted construction company in Kerala, like Lempire Builders, is so important.",
+        ],
+      },
+      {
+        title: "Pros and Cons of Traditional Construction",
+        image: "",
+        desc: [
+          "✅ Advantages",
+          "- Full control: You can modify designs or materials anytime.",
+          "- Transparency: You personally manage purchases and costs.",
+          "- Customization: Great for those who want unique or experimental designs.",
+
+          "❌ Disadvantages",
+          "- Time-consuming: Managing multiple teams takes effort and can cause delays.",
+          "- Budget fluctuations: Costs may rise due to material price changes or rework.",
+          "- Stressful: Coordinating workers, suppliers, and timelines can be overwhelming.",
+        ],
+      },
+      {
+        title: "How to Choose the Right Method",
+        image: "",
+        desc: [
+          "Your choice depends on your goals, schedule, and comfort level with project management.",
+
+          "Choose Turnkey Construction if you:",
+          "- Want a hassle-free experience",
+          "- Need a fixed budget with no surprise costs",
+          "- Have a busy schedule or live abroad",
+          "- Prefer a trusted team to handle everything",
+          "At Lempire Builders, we offer complete turnkey home construction in Kerala — from design to interiors — with real-time updates, transparent pricing, and full support, even for NRI clients.",
+        ],
+      },
+      {
+        title: "Choose Traditional Construction if you:",
+        image: "",
+        desc: [
+          "Enjoy managing projects hands-on",
+          "- Have time to supervise regularly",
+          "- Want to control every detail",
+          "- Plan a highly customized or experimental design",
+        ],
+      },
+      {
+        title: "Why Turnkey Construction Is Growing in Kerala",
+        image: "",
+        desc: [
+          "Turnkey projects are becoming the top choice for many homeowners in Kerala.Today’s families value convenience, transparency, and timely delivery.",
+
+          "With more NRIs investing in homes back home, turnkey construction offers peace of mind — a reliable builder manages everything while clients stay updated remotely.",
+
+          "At Lempire Builders, we specialize in:",
+
+          " Complete house construction",
+          "- Luxury villa projects",
+          "- Modern and classic interiors",
+          "- Renovation and remodeling",
+          "- Modular kitchen design",
+          "Our mission is to make home building simple, efficient, and enjoyable.",
+        ],
+      },
     ],
   },
 ];
@@ -311,9 +744,8 @@ export type PortfoliosType = {
 export const portfolios: PortfoliosType[] = [
   {
     id: 1,
-    title: "DR. SUMESH'S RESIDENCE",
-    location:
-      "Kottayam, Kerala | Completed in 2025 | Turnkey Residence | 5000 Sq. feet",
+    title: "DR. SUMESH MATHEW'S RESIDENCE",
+    location: "Kottayam, Kerala | 5999 Sq. feet",
     images: [
       ["/images/portfolio/dr_sumesh_residence/pic_1.webp"],
       ["/images/portfolio/dr_sumesh_residence/pic_2.webp"],
@@ -332,11 +764,11 @@ export const portfolios: PortfoliosType[] = [
   {
     id: 2,
     title: "MR. JAMES'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Idukki, Kerala | 5287 Sq. feet",
     images: [
+      ["/images/portfolio/james_pakalomattam_residence/03.webp"],
       ["/images/portfolio/james_pakalomattam_residence/01.webp"],
       ["/images/portfolio/james_pakalomattam_residence/02.webp"],
-      ["/images/portfolio/james_pakalomattam_residence/03.webp"],
       [
         "/images/portfolio/james_pakalomattam_residence/04.1.webp",
         "/images/portfolio/james_pakalomattam_residence/04.2.webp",
@@ -344,9 +776,20 @@ export const portfolios: PortfoliosType[] = [
     ],
   },
   {
+    id: 1,
+    title: "MR. VIJESH CHERIYAN'S RESIDENCE",
+    location: "Eranakulam, Kerala | 4733 Sq. feet",
+    images: [
+      ["/images/portfolio/mr_vijesh_cheriyan/10.png"],
+      ["/images/portfolio/mr_vijesh_cheriyan/11.png"],
+      ["/images/portfolio/mr_vijesh_cheriyan/12.png"],
+      ["/images/portfolio/mr_vijesh_cheriyan/13.png"],
+    ],
+  },
+  {
     id: 3,
     title: "MR. RIYAS'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Trivandrum, Kerala | 3945 Sq. feet",
     images: [
       ["/images/portfolio/mr_riyas_residence/01.webp"],
       ["/images/portfolio/mr_riyas_residence/02.webp"],
@@ -357,9 +800,31 @@ export const portfolios: PortfoliosType[] = [
     ],
   },
   {
+    id: 4,
+    title: "MR. KIRAN RAJU'S RESIDENCE",
+    location: "Alappuzha, Kerala | 2613 Sq. feet",
+    images: [
+      ["/images/portfolio/mr_kiran_raju_residence/04.webp"],
+      ["/images/portfolio/mr_kiran_raju_residence/03.webp"],
+      ["/images/portfolio/mr_kiran_raju_residence/01.webp"],
+      ["/images/portfolio/mr_kiran_raju_residence/02.webp"],
+    ],
+  },
+  {
+    id: 12,
+    title: "MR. SARATH'S RESIDENCE",
+    location: "Kottayam, Kerala | 2123 Sq. feet",
+    images: [
+      ["/images/portfolio/mr_sarath_02/14.png"],
+      ["/images/portfolio/mr_sarath_02/15.png"],
+      ["/images/portfolio/mr_sarath_02/16.png"],
+      ["/images/portfolio/mr_sarath_02/17.png"],
+    ],
+  },
+  {
     id: 6,
     title: "MR. SARATH'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Kottayam, Kerala | 1969 Sq. feet",
     images: [
       ["/images/portfolio/mr_sarath_residence/01.webp"],
       ["/images/portfolio/mr_sarath_residence/02.webp"],
@@ -369,7 +834,7 @@ export const portfolios: PortfoliosType[] = [
   {
     id: 7,
     title: "MR. JACOB'S RESIDENCE",
-    location: "Thiruvalla, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Pathanamthitta, Kerala | 4382 Sq. feet",
     images: [
       ["/images/portfolio/mr_jacobs_residence/03.webp"],
       ["/images/portfolio/mr_jacobs_residence/02.webp"],
@@ -378,9 +843,20 @@ export const portfolios: PortfoliosType[] = [
     ],
   },
   {
+    id: 12,
+    title: "MR.  VINOD'S RESIDENCE",
+    location: "Kottayam, Kerala | Sq. feet",
+    images: [
+      ["/images/portfolio/mr_vinod/18.png"],
+      ["/images/portfolio/mr_vinod/19.png"],
+      ["/images/portfolio/mr_vinod/20.png"],
+      ["/images/portfolio/mr_vinod/21.png"],
+    ],
+  },
+  {
     id: 8,
     title: "MR. DEEPU'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Kottayam, Kerala | 1500 Sq. feet",
     images: [
       ["/images/portfolio/mr_deepu_residence/01.webp"],
       ["/images/portfolio/mr_deepu_residence/02.webp"],
@@ -393,7 +869,7 @@ export const portfolios: PortfoliosType[] = [
   {
     id: 9,
     title: "MR. ANOOP'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Kottayam, Kerala | 2593 Sq. feet",
     images: [
       ["/images/portfolio/mr_anoop_residence/02.webp"],
       ["/images/portfolio/mr_anoop_residence/01.webp"],
@@ -404,36 +880,103 @@ export const portfolios: PortfoliosType[] = [
     ],
   },
   {
-    id: 11,
-    title: "MR. JEFRIN'S RESIDENCE",
-    location: "Ernakulam, Kerala | Turnkey Residence | 2500 Sq. feet",
-    images: [["/images/portfolio/mr_jefrins_residence/01.webp"]],
+    id: 12,
+    title: "MR. CHACKO'S RESIDENCE",
+    location: "IDUKKI, Kerala | 3770 Sq. feet",
+    images: [
+        ["/images/portfolio/mr_chacko/5.png"],
+        ["/images/portfolio/mr_chacko/6.png"],
+        ["/images/portfolio/mr_chacko/7.png"],
+        ["/images/portfolio/mr_chacko/8.png"],
+        ["/images/portfolio/mr_chacko/9.png"],
+    ],
+  },
+  {
+    id: 12,
+    title: "MR. SHYJU ALEX'S RESIDENCE",
+    location: "Kottayam, Kerala | 2766 Sq. feet",
+    images: [
+      ["/images/portfolio/mr_shyju/70.png"],
+      ["/images/portfolio/mr_shyju/71.png"],
+      ["/images/portfolio/mr_shyju/72.png"],
+      ["/images/portfolio/mr_shyju/73.png"]
+    ],
   },
   {
     id: 12,
     title: "MR. SHIBU GEORGE'S RESIDENCE",
-    location: "Mavelikkara, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Kottayam, Kerala | 2700 Sq. feet",
     images: [["/images/portfolio/shibu_george_residence/01.webp"]],
   },
   {
-    id: 13,
-    title: "MR. MANISH'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    id: 11,
+    title: "MR. JEFRIN'S RESIDENCE",
+    location: "Ernakulam, Kerala | 1901 Sq. feet",
+    images: [["/images/portfolio/mr_jefrins_residence/01.webp"]],
+  },
+  {
+    id: 12,
+    title: "MR. TOMY'S RESIDENCE",
+    location: "Kottayam, Kerala | 2428 Sq. feet",
     images: [
-      ["/images/portfolio/mr_manish_residence/01.webp"],
-      ["/images/portfolio/mr_manish_residence/02.webp"],
+      ["/images/portfolio/mr_tomy/2.png"],
+      ["/images/portfolio/mr_tomy/4.png"], 
+      ["/images/portfolio/mr_tomy/3.png"], 
+      ["/images/portfolio/mr_tomy/1.png"],
     ],
   },
   {
+    id: 12,
+    title: "MR. SHUKKOOR'S RESIDENCE",
+    location: "Kollam, Kerala | 2970 Sq. feet",
+    images: [
+      ["/images/portfolio/mr_shukkoor/58.png"],
+      ["/images/portfolio/mr_shukkoor/59.png"],
+    ],
+  },
+  {
+    id: 12,
+    title: "MR. JOJY'S RESIDENCE",
+    location: "Kottayam, Kerala | 3085 Sq. feet",
+    images: [
+      ["/images/portfolio/mr_jojy_02/63.png"],
+      ["/images/portfolio/mr_jojy_02/64.png"],
+      ["/images/portfolio/mr_jojy_02/65.png"],
+      ["/images/portfolio/mr_jojy_02/66.png"],
+      ["/images/portfolio/mr_jojy_02/67.png"],
+    ],
+  },
+  {
+    id: 17,
+    title: "MR. AJIN K GEORGE'S RESIDENCE",
+    location: "Kottayam, Kerala | 1898 Sq. feet",
+    images: [
+      ["/images/portfolio/mr_ajin_k_george_residence/01.webp"],
+      ["/images/portfolio/mr_ajin_k_george_residence/02.webp"],
+      ["/images/portfolio/mr_ajin_k_george_residence/03.webp"],
+      ["/images/portfolio/mr_ajin_k_george_residence/04.webp"],
+    ],
+  },
+
+  // {
+  //   id: 13,
+  //   title: "MR. MANISH'S RESIDENCE",
+  //   location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+  //   images: [
+  //     ["/images/portfolio/mr_manish_residence/01.webp"],
+  //     ["/images/portfolio/mr_manish_residence/02.webp"],
+  //   ],
+  // },
+  {
     id: 14,
     title: "MR. JAMES'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Palakkad, Kerala | 2912 Sq. feet",
     images: [["/images/portfolio/mr_james_residence/01.webp"]],
   },
   {
     id: 15,
     title: "MR. JOE SYLVESTER'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Kottayam, Kerala | 2613 Sq. feet",
     images: [
       ["/images/portfolio/mr_joe_sylvester_residence/01.webp"],
       ["/images/portfolio/mr_joe_sylvester_residence/02.webp"],
@@ -442,51 +985,61 @@ export const portfolios: PortfoliosType[] = [
   {
     id: 16,
     title: "MR. MATHEW'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Kottayam, Kerala | 2545 Sq. feet",
     images: [["/images/portfolio/mr_mathew_residence/01.webp"]],
+  },
+  {
+    id: 16,
+    title: "L'EMPIRE BUILDERS RESIDENCE",
+    location: "Kottayam, Kerala | 2785 Sq.feet",
+    images: [
+      ["/images/portfolio/lempire_builders_residence/1.png"],
+      ["/images/portfolio/lempire_builders_residence/2.png"],
+      ["/images/portfolio/lempire_builders_residence/3.png"]
+    ],
   },
   {
     id: 18,
     title: "MR. ANIL'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Kottayam, Kerala | 2350 Sq. feet",
     images: [
       ["/images/portfolio/mr_anil_residence/01.webp"],
       ["/images/portfolio/mr_anil_residence/02.webp"],
     ],
   },
   {
-    id: 20,
-    title: "MR. JAYAPRAKASH'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
-    images: [["/images/portfolio/mr_jayaprakash_residence/01.webp"]],
-  },
-  {
-    id: 190,
-    title: "MR. KIRAN RAJU'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    id: 12,
+    title: "MR. JINTO'S RESIDENCE",
+    location: "Thrissur, Kerala | 1388 Sq. feet",
     images: [
-      ["/images/portfolio/mr_kiran_raju_residence/01.webp"],
-      ["/images/portfolio/mr_kiran_raju_residence/02.webp"],
-      ["/images/portfolio/mr_kiran_raju_residence/03.webp"],
-      ["/images/portfolio/mr_kiran_raju_residence/04.webp"],
+      ["/images/portfolio/mr_jinto/68.png"],
+      ["/images/portfolio/mr_jinto/69.png"],
+      ["/images/portfolio/mr_jinto/70.png"],
+      ["/images/portfolio/mr_jinto/71.png"],
     ],
   },
+  // {
+  //   id: 12,
+  //   title: "MR. GEORGE'S RESIDENCE",
+  //   location: "Kottayam, Kerala | 1900 Sq. feet",
+  //   images: [],
+  // },
   {
-    id: 800,
-    title: "MR. JAIMON'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
-    images: [["/images/portfolio/mr_jaimon_residence/01.webp"]],
+    id: 19,
+    title: "MR. JAYAPRAKASH'S RESIDENCE",
+    location: "Thrissur, Kerala | 3042 Sq. feet",
+    images: [["/images/portfolio/mr_jayaprakash_residence/01.webp"]],
   },
   {
     id: 400,
     title: "MR. VIVEK'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Kollam, Kerala | 2849 Sq. feet",
     images: [["/images/portfolio/mr_vivek_residence/01.webp"]],
   },
   {
     id: 200,
     title: "MR. SUNIL'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
+    location: "Kottayam, Kerala | 4700 Sq. feet",
     images: [
       ["/images/portfolio/mr_sunil_residence/01.webp"],
       ["/images/portfolio/mr_sunil_residence/02.webp"],
@@ -494,25 +1047,31 @@ export const portfolios: PortfoliosType[] = [
     ],
   },
   {
-    id: 130,
-    title: "MR. AJIN K GEORGE'S RESIDENCE",
-    location: "Trivandrum, Kerala | Turnkey Residence | 2500 Sq. feet",
-    images: [
-      ["/images/portfolio/mr_ajin_k_george_residence/01.webp"],
-      ["/images/portfolio/mr_ajin_k_george_residence/02.webp"],
-      ["/images/portfolio/mr_ajin_k_george_residence/03.webp"],
-      ["/images/portfolio/mr_ajin_k_george_residence/04.webp"],
-    ],
+    id: 800,
+    title: "MR. JAIMON'S RESIDENCE",
+    location: "Kottayam, Kerala | 1950 Sq. feet",
+    images: [["/images/portfolio/mr_jaimon_residence/01.webp"]],
   },
-  {
-    id: 200,
-    title: "MR. MANAIKH LAL'S RESIDENCE",
-    location: "Thrissur, Kerala | Turnkey Residence | 2500 Sq. feet",
-    images: [
-      ["/images/portfolio/mr_manaikh_lals_residence/pic_1.webp"],
-      ["/images/portfolio/mr_manaikh_lals_residence/pic_2.webp"],
-    ],
-  },
+  // {
+  //   id: 130,
+  //   title: "MR. AJIN K GEORGE'S RESIDENCE",
+  //   location: "Trivandrum, Kerala | 2500 Sq. feet",
+  //   images: [
+  //     ["/images/portfolio/mr_ajin_k_george_residence/01.webp"],
+  //     ["/images/portfolio/mr_ajin_k_george_residence/02.webp"],
+  //     ["/images/portfolio/mr_ajin_k_george_residence/03.webp"],
+  //     ["/images/portfolio/mr_ajin_k_george_residence/04.webp"],
+  //   ],
+  // },
+  // {
+  //   id: 200,
+  //   title: "MR. MANAIKH LAL'S RESIDENCE",
+  //   location: "Thrissur, Kerala | Turnkey Residence | 2500 Sq. feet",
+  //   images: [
+  //     ["/images/portfolio/mr_manaikh_lals_residence/pic_1.webp"],
+  //     ["/images/portfolio/mr_manaikh_lals_residence/pic_2.webp"],
+  //   ],
+  // },
   // {
   //   id: 18,
   //   title: "MR. ROSHIN'S RESIDENCE",
@@ -620,6 +1179,34 @@ export const reviews = [
     review:
       "We had a limited plot area and a modest budget, which made the planning stage quite challenging. But L'empire Builders took on every difficulty with expertise and creativity. Despite the constraints, they designed a beautiful home that perfectly suits our needs. Their dedication, flawless execution, and constant support made our journey smooth from start to finish.",
   },
+];
+
+export const servicesData = [
+  {
+    title: "TURNKEY RESIDENCES",
+    desc: "Complete architectural and interior solutions where vision meets reality. Each residence tells a unique story of client collaboration and design excellence.",
+    image: "/images/services/TURNKEY RESIDENCES.png",
+  },
+  {
+    title: "Architectural Planning",
+    desc: "Practical architectural planning with detailed 2D drawings and realistic 3D visualisations to ensure clarity before construction begins",
+    image: "/images/services/VAASTU-COMPLIANT DESIGNS.png",
+  },
+  {
+    title: "INTERIOR TRANSFORMATIONS",
+    desc: "Creative makeovers showcasing dramatic yet functional transformations.",
+    image: "/images/services/INTERIOR TRANSFORMATIONS.png",
+  },
+  {
+    title: "NRI DREAM PROJECTS",
+    desc: "Space reimagining through strategic design interventions. Before-and-after journeys showcasing dramatic yet functional makeovers.",
+    image: "/images/services/NRI DREAM PROJECTS.png",
+  },
+  // {
+  //     title: "VAASTU-COMPLIANT DESIGNS",
+  //     desc: "Architectural solutions balancing modern needs with ancient wisdom. Spaces that feel right and function perfectly.",
+  //     image: "/images/services/VAASTU-COMPLIANT DESIGNS.png",
+  // },
 ];
 
 // Fetch one post by slug
