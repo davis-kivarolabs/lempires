@@ -68,11 +68,11 @@ const page = () => {
           />
           <ImageGallery interior={"Dining Area"}
             images={[
-                      "/images/interior/living_room/1.jpg",
-                      "/images/interior/living_room/2.jpg",
-                      "/images/interior/living_room/3.jpg",
-                      "/images/interior/living_room/4.jpg",
-                      "/images/interior/living_room/5.png",
+                      "/images/interior/dining_area/1.jpg",
+                      "/images/interior/dining_area/2.png",
+                      "/images/interior/dining_area/3.jpg",
+                      "/images/interior/dining_area/4.jpg",
+                      "/images/interior/dining_area/5.png",
             ]}
           />
           <ImageGallery interior={"Bedroom"}

@@ -934,18 +934,18 @@ export const portfolios: PortfoliosType[] = [
       ["/images/portfolio/mr_shukkoor/59.png"],
     ],
   },
-  {
-    id: 12,
-    title: "MR. JOJY'S RESIDENCE",
-    location: "Kottayam, Kerala | 3085 Sq. feet",
-    images: [
-      ["/images/portfolio/mr_jojy_02/63.png"],
-      ["/images/portfolio/mr_jojy_02/64.png"],
-      ["/images/portfolio/mr_jojy_02/65.png"],
-      ["/images/portfolio/mr_jojy_02/66.png"],
-      ["/images/portfolio/mr_jojy_02/67.png"],
-    ],
-  },
+  // {
+  //   id: 12,
+  //   title: "MR. JOJY'S RESIDENCE",
+  //   location: "Kottayam, Kerala | 3085 Sq. feet",
+  //   images: [
+  //     ["/images/portfolio/mr_jojy_02/63.png"],
+  //     ["/images/portfolio/mr_jojy_02/64.png"],
+  //     ["/images/portfolio/mr_jojy_02/65.png"],
+  //     ["/images/portfolio/mr_jojy_02/66.png"],
+  //     ["/images/portfolio/mr_jojy_02/67.png"],
+  //   ],
+  // },
   {
     id: 17,
     title: "MR. AJIN K GEORGE'S RESIDENCE",
