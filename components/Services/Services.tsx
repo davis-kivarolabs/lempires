@@ -12,22 +12,25 @@ const servicesData = [
   {
     title: "TURNKEY RESIDENCES",
     desc: "Complete architectural and interior solutions where vision meets reality. Each residence tells a unique story of client collaboration and design excellence.",
-    image: "/images/services/TURNKEY RESIDENCES.png",
+    image: "/images/services/1.png",
+    // image: "/images/services/TURNKEY RESIDENCES.png",
   },
   {
     title: "2D / 3D DESIGNS",
     desc: "Architectural solutions balancing modern needs with ancient wisdom. Spaces that feel right and function perfectly.",
-    image: "/images/services/VAASTU-COMPLIANT DESIGNS.png",
+    image: "/images/services/2.jpg",
+    // image: "/images/services/VAASTU-COMPLIANT DESIGNS.png",
   },
   {
     title: "INTERIOR TRANSFORMATIONS",
     desc: "Creative makeovers showcasing dramatic yet functional transformations.",
-    image: "/images/services/INTERIOR TRANSFORMATIONS.png",
+    image: "/images/services/3.png",
   },
   {
     title: "NRI DREAM PROJECTS",
     desc: "Space reimagining through strategic design interventions. Before-and-after journeys showcasing dramatic yet functional makeovers.",
-    image: "/images/services/NRI DREAM PROJECTS.png",
+    image: "/images/services/4.png",
+    // image: "/images/services/NRI DREAM PROJECTS.png",
   },
   // {
   //     title: "VAASTU-COMPLIANT DESIGNS",

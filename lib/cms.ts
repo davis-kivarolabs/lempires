@@ -100,7 +100,7 @@ export const blogs: BlogType[] = [
   {
     slug: "nri-s-guide-to-building-a-home-in-kerala-without-being-on-site",
     title: "NRI’s Guide to Building a Home in Kerala Without Being on Site",
-    image: "/images/blogs/behind_the_build.png",
+    image: "/images/portfolio/mr_riyas_residence/01.webp",
     desc: [
       "For many Non-Resident Indians (NRIs), NRI home construction in Kerala is more than just a project — it’s a dream. Some plan for retirement, others see it as an investment, and many simply want a family home where memories can be made.But there’s one big challenge: most of this has to be managed while living abroad. The idea of building a house without being on site can feel stressful. The good news? With the right builder and modern tools, it is not only possible but also smooth and rewarding.",
     ],
@@ -196,7 +196,7 @@ export const blogs: BlogType[] = [
   {
     slug: "behind-the-build-what-makes-a-home-truly-last",
     title: "Behind the Build: What Makes a Home Truly Last?",
-    image: "/images/blogs/behind_the_build.png",
+    image: "/images/portfolio/mr_kiran_raju_residence/04.webp",
     created_by: "by L'empire builders | Oct 13, 2025 | Blog, English",
     contents: [
       {
@@ -615,7 +615,7 @@ export const blogs: BlogType[] = [
   {
     slug: "turnkey-vs-traditional-construction:-what’s the-difference?",
     title: "Turnkey vs Traditional Construction: What’s the Difference?",
-    image: "/images/blogs/behind_the_build.png",
+    image: "/images/portfolio/mr_deepu_residence/01.webp",
     desc: [
       "Owning a home is one of the biggest dreams for any family. But when it’s time to begin, many people face a key question:Should you choose turnkey construction or traditional construction?",
       "Both methods can help you build your dream home — but the process, cost, and experience are very different.At Lempire Builders, one of the most trusted home builders in Kerala, we help clients choose the right approach based on their needs, budget, and lifestyle.",

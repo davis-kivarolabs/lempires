@@ -1,4 +1,4 @@
-import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
+// import BreadCrumbs from "@/components/BreadCrumbs/BreadCrumbs";
 import Footer from "@/components/Footer";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
 
