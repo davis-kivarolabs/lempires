@@ -1,7 +1,6 @@
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import { DescTexts, SectionTitle } from '@/components/Texts/Texts';
 import Image from 'next/image';
-import React from 'react'
 import "./about.scss"
 import Footer from '@/components/Footer';
 import ApproachSection from '@/components/ApproachSection/ApproachSection';
@@ -25,13 +24,13 @@ const About = () => {
                     </div>
                     <div className='content' >
                         <DescTexts color='#878C91' desc="At L'empire Builders, we believe great spaces should feel right from the moment you enter. We create homes that balance beautiful design with practical living, blending timeless Vaastu principles with contemporary comfort. Our approach is simple: listen deeply, design intentionally, and deliver spaces where life unfolds naturally." />
-                        <Image className='our_ethos_image' alt='about our ethos' src={"/images/about_our_ethos.webp"} width={700} height={700} />
+                        <Image className='our_ethos_image' alt='about our ethos' src={"/images/about_our_ethos.webp"} width={1000} height={1000} />
                     </div>
                 </div>
 
                 <Achievements />
 
-                <div className="founders_note_section padding_section">
+                {/* <div className="founders_note_section padding_section">
                     <div className='breadcrumbs_wrapper_mob' >
                         <BreadCrumbs title='FOUNDER’S NOTE ' />
                     </div>
@@ -64,7 +63,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <ApproachSection />
 
