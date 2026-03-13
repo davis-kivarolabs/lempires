@@ -2,9 +2,9 @@
 
 import "./Achievements.scss"
 const Achievements = ({ bg_color, font_color }: { bg_color?: string; font_color?: string; }) => {
-    const homeDelivered: any = useCountUp(2500);
+    const designDelivered: any = useCountUp(700);
     const yearsIndustry: any = useCountUp(5);
-    const nriClients: any = useCountUp(50);
+    const homeDelivered: any = useCountUp(85);
 
     return (
         <div className='achievements_section padding_section' style={{ backgroundColor: bg_color }} >
@@ -22,7 +22,7 @@ const Achievements = ({ bg_color, font_color }: { bg_color?: string; font_color?
             <div className='lists' >
                 <div className='list' ></div>
                 <div className='list content' style={{ color: font_color }} >
-                    <h2 ref={homeDelivered.ref}>{homeDelivered.count} <span>+</span></h2>
+                    <h2 ref={designDelivered.ref}>{designDelivered.count} <span>+</span></h2>
                     <p>DESIGNS COMPLETED</p>
                 </div>
                 <div className='list' ></div>
@@ -35,7 +35,7 @@ const Achievements = ({ bg_color, font_color }: { bg_color?: string; font_color?
                 <div className='list' ></div>
                 <div className='list' ></div>
                 <div className='list content' style={{ color: font_color }} >
-                    <h2 ref={nriClients.ref}>{nriClients.count} <span>+</span></h2>
+                    <h2 ref={homeDelivered.ref}>{homeDelivered.count} <span>+</span></h2>
                     <p>HOMES DELIVERED</p>
                     {/* <p>COUNTRY’S NRI CLIENTS</p> */}
                 </div>

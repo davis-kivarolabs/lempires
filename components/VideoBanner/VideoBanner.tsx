@@ -6,6 +6,7 @@ import "./VideoBanner.scss";
 
 export default function VideoBanner() {
     const [isMobile, setIsMobile] = useState(false);
+    console.log(isMobile)
     const text = "Architecture of Being";
     const letters = text.split("");
 

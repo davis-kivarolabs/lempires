@@ -7,6 +7,7 @@ import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
 import { DescTexts, ServicesTitle } from "../Texts/Texts";
 import { PrimaryButton } from "../Button/Button";
 import "./Services.scss";
+import { useRouter } from "next/navigation";
 
 const servicesData = [
   {
@@ -52,7 +53,7 @@ const Services = () => {
     [0.05, 0.15, 0.9, 1],
     [0, 1, 1, 0]
   );
-
+  const router = useRouter();
   return (
     <section ref={sectionRef} className="services_section">
       {/* LEFT SIDE CONTENT */}
@@ -79,7 +80,9 @@ const Services = () => {
             );
           })}
           <div className="btn_wrap">
-            <PrimaryButton label="MORE ABOUT US" />
+            <PrimaryButton
+              onClick={() => router.push("/about")}
+              label="MORE ABOUT US" />
           </div>
         </div>
 
@@ -100,7 +103,7 @@ const Services = () => {
             </div>
           ))}
           <div className="btn_wrap">
-            <PrimaryButton label="MORE ABOUT US" />
+            <PrimaryButton onClick={() => router.push("/about")} label="MORE ABOUT US" />
           </div>
         </div>
       </motion.div>

@@ -2,7 +2,6 @@ import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Footer from '@/components/Footer';
 import { PropertyCarouselPerson } from '@/components/PropertyCarousel/PropertyCarousel';
 import { portfolios } from '@/lib/cms';
-import React from 'react'
 
 export const metadata = {
     title: "L’empire Builders Portfolio | Completed Home Projects in Kerala",

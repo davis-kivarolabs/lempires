@@ -49,7 +49,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div style={{ width: "70%", display: "flex", flexDirection: "column", gap: "23px" }} >
+              <div style={{ width: "70%", display: "flex", flexDirection: "column", gap: "23px", marginBottom:"20px" }} >
                 <div className='flex' style={{ justifyContent: "space-between" }} >
                   <Link href="https://share.google/ywVrO3P45QTmDUsE7" target='_blank' >
                     <div className='flex gap-[10px]' >
@@ -63,7 +63,7 @@ const Contact = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <p className='text-[#010205] text-[16px]' >Kottayam</p>
+                      <p className='text-[#010205] text-[16px]' >Kochi & Kottayam</p>
                     </div>
                   </Link>
 
@@ -72,7 +72,7 @@ const Contact = () => {
                   </Link> */}
                 </div>
 
-                <div className='flex' style={{ justifyContent: "space-between" }} >
+                {/* <div className='flex' style={{ justifyContent: "space-between" }} >
                   <Link href="https://share.google/ywVrO3P45QTmDUsE7" target='_blank' >
                     <div className='flex gap-[10px]' >
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,11 +88,8 @@ const Contact = () => {
                       <p className='text-[#010205] text-[16px]' >Kochi</p>
                     </div>
                   </Link>
+                </div> */}
 
-                  {/* <Link href="https://share.google/ywVrO3P45QTmDUsE7" target='_blank' >
-                    <p>Lempire Builders <br /> '#975 B', Vallamattam Building <br /> Perumbaikadu PO <br /> Kottayam</p>
-                  </Link> */}
-                </div>
               </div>
             </div>
 

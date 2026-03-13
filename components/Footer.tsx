@@ -1,9 +1,9 @@
 'use client'
 
-import React from 'react'
 import { PrimaryButton } from './Button/Button'
 import Link from 'next/link'
 import Image from 'next/image'
+import "../app/styles/_components.scss"
 
 const Footer = ({ title }: { title?: string; }) => {
     // href="tel:+917012191993"
@@ -66,7 +66,7 @@ const Footer = ({ title }: { title?: string; }) => {
                         </Link>
                     </div>
                     <div className='flex gap-[10px]' >
-                    <p>Kochi</p><p>|</p><p>Kottayam</p>
+                        <p>Kochi</p><p>|</p><p>Kottayam</p>
                     </div>
                 </div>
 
@@ -99,11 +99,11 @@ const Footer = ({ title }: { title?: string; }) => {
                                 </svg>
                             </span>
                             <div className='flex gap-[10px]' >
-                                <Link href="tel:+917012191993" >
+                                <Link style={{ textWrap: "nowrap" }} href="tel:+917012191993" >
                                     <p>+91-7012191993</p>
                                 </Link>
 
-                                <Link href="tel:+919633888123" >
+                                <Link style={{ textWrap: "nowrap" }} href="tel:+919633888123" >
                                     <p>+91-9633888123</p>
                                 </Link>
                             </div>
